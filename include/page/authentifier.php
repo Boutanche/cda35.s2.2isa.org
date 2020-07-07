@@ -1,0 +1,70 @@
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2 text-center pt-70">
+                            <h1 style="color: #fcf8e3">Uniquement pour les membres du Club</h1>
+                            <h2>S'authentifier comme Membre du MCMP</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!--? Contact form Start -->
+    <div class="contact-form-main mt-100 mb-100">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="form-wrapper">
+                        <!--Section Tittle  -->
+                        <div class="form-tittle">
+                            <div class="row ">
+                                <div class="col-lg-11 col-md-10 col-sm-10">
+                                    <div class="section-tittle">
+                                        <span>Connexion</span>
+                                        <h2>Uniquement les membres du MCMP_1%</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Section Tittle  -->
+                        <?php include ('./include/layout/invite.php');?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact left Img-->
+        <div class="from-left d-none d-lg-block">
+            <img src="./img/galerie/authentif_form.png" alt="Les membres">
+        </div>
+    </div>
+    <!-- Contact form End -->
+    <div class="contact-form-main mt-100 mb-100">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="form-wrapper">
+                        <!--Section Tittle  -->
+                        <div class="form-tittle">
+                            <div class="row ">
+                                <div class="col-lg-11 col-md-10 col-sm-10">
+                                    <div class="section-tittle">
+                                        <span>S'enregistrer</span>
+                                        <h2>Phase de test du site</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php include ('./include/layout/register.php');?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,22 @@
+.slider-area, .slider-area2 {
+  background-image: url("../../img/hero/h1_moto001.png");
+}
+.header-btn{
+   margin-top: 25px;
+ }
+
+#navigation {
+  a.active{
+    color: red;
+    text-decoration: underline;
+  }
+  a{
+    color: whitesmoke;
+  }
+  a:hover{
+    color: red;
+  }
+  .btn:hover{
+    color: #212529;
+  }
+}

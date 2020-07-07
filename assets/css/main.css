@@ -1,0 +1,37 @@
+/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+.slider-area, .slider-area2 {
+  background-image: url("../../img/hero/h1_moto001.png");
+}
+
+/* line 4, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+.header-btn {
+  margin-top: 25px;
+}
+
+/* line 9, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+#navigation a.active {
+  color: red;
+  text-decoration: underline;
+}
+
+/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+#navigation a {
+  color: whitesmoke;
+}
+
+/* line 16, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+#navigation a:hover {
+  color: red;
+}
+
+/* line 19, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+#navigation .btn:hover {
+  color: #212529;
+}
+
+/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_member.scss */
+#members {
+  margin-top: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
