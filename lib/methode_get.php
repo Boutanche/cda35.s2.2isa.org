@@ -1,6 +1,7 @@
 <?php
 //Superglobal $_GET -> récupération de l'information de l'URL ? page=presentation
     //Les requêtes :
+    //TODO : Supprimer Invitation ne sert à rien. C'était juste pour le test.
     $reponse = $bddovh->query('SELECT * FROM page');
     $testUser = $bddovh->query('SELECT * FROM invitation');
     $testAdh = $bddovh->query('SELECT * FROM adherent');
@@ -16,6 +17,7 @@
         //Tableau $ar_page_var :
         while ($donnees = $reponse->fetch()) {
             //Ajouter les données par index à la variable $ar_page_var
+            //TODO : Le tabelau menu est une copie identique du tableau page. Le supprimer ne sert à rien.
             $ar_page_var[$donnees['key_file']] = $donnees;
             $ar_menu_var[$donnees['id_page']] = $donnees;
         }
