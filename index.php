@@ -16,6 +16,7 @@
      * Mais j'ai quand même effectué un test en renomant ma page par défaut, "default" et tout fonctionnait correctement.
     */
     //insertion de la base de données hébergée sous OVH.
+    //On est arrivé à Millau
     include('./config/config.php');
     //mes librairies PHP :
     //TODO : Effectuer un découpage plus pertient.
