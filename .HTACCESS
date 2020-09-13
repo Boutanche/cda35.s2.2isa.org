@@ -10,6 +10,6 @@ ErrorDocument 404 /page-404
 
 #exemple avec une reecriture de type dynamique
 RewriteRule	^page-([a-z0-9]*)$ index.php?page=$1 [L]
-RewriteRule ^admin include/page/mcmp_admin/admin.php [L]
+#RewriteRule ^admin include/mcmp/mcmp_admin/admin.php [L]
 #je m'en sert pas de ça encore...
-#RewriteRule	^page-([a-z]*)-([0-9]*)$ index.php?page=$1&id=$2 [L]
+RewriteRule	^page-([a-z]*)-([0-9]*)$ index.php?page=$1&id=$2 [L]

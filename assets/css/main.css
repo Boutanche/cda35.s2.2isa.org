@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
 .btn:hover {
   color: #c6c8ca;
@@ -227,6 +228,41 @@
 #gallery {
   padding-top: 5%;
   padding-left: 5%;
+}
+
+/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+#admin_form {
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+/* line 5, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+#img_form {
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+/* line 9, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+#form_title {
+  padding-top: 5%;
+  padding-bottom: 1%;
+}
+
+/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+#inscription_Membre-form {
+  padding: 5% 2% 2% 5%;
+  position: relative;
+}
+
+/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_map.scss */
+#map {
+  /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+  height: 510px;
+}
+
+/* line 5, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_map.scss */
+.map {
+  padding-bottom: 2%;
 }
 
 /*# sourceMappingURL=main.css.map */

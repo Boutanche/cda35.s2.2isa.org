@@ -18,7 +18,7 @@
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="./img/galerie/blog1.png" alt="Anniversaire">
+                                <img src="https://via.placeholder.com/555x366" alt="<?php echo $tb_news['Titre'];?>">
                                 <!-- Blog date -->
                                 <div class="blog-date text-center">
                                     <span><?php echo $tb_news['DPubli'] ?></span>
