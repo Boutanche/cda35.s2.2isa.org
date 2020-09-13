@@ -31,7 +31,7 @@
                                             <li><a href="#">Lundi : 12h_14h</a></li>
                                             <li><a href="#">Mardi // Vendredi : 16h_20h</a></li>
                                             <li><a href="#">Samedi : 10h_18h</a></li>
-                                            <li><a href="#">Dimanche : 10h_14h</a></li>
+                                            <li><a href="#">Nous contacter</a></li>
                                         </ul>
                                     </div>
                                 </div>

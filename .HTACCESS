@@ -1,0 +1,15 @@
+#j'active le mode reecriture URL
+RewriteEngine ON
+
+#mon fichier statique erreur 404
+ErrorDocument 404 /page-404
+
+#exemple avec une reecriture de type statique
+#RewriteRule ^informations index.php?page=informations [L]
+#RewriteRule ^contact index.php?page=contact [L]
+
+#exemple avec une reecriture de type dynamique
+RewriteRule	^page-([a-z0-9]*)$ index.php?page=$1 [L]
+RewriteRule ^admin include/page/mcmp_admin/admin.php [L]
+#je m'en sert pas de ça encore...
+#RewriteRule	^page-([a-z]*)-([0-9]*)$ index.php?page=$1&id=$2 [L]

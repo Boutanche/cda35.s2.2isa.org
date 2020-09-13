@@ -20,3 +20,89 @@
     color: #212529;
   }
 }
+.modal {
+  display: none;
+}
+.modal-content{
+  display: none;
+  color: white;
+  background-color: #4e555b;
+  padding-top: 5px;
+}
+.btn-modal{
+  color: white;
+  background-color: black;
+  border-color: #4e555b;
+}
+.btn-modal:hover{
+  background-color: #c82333;
+}
+.btn-modal:active {
+  background-color: #c82333;
+}
+#modal_log{
+  padding-top: 10px;
+  position: absolute;
+  height: 60px;
+  width: 600px;
+  input{
+    height: 25px;
+  }
+  p{
+    color: white;
+  };
+}
+#login_mod{
+  position: fixed;
+}
+.dropdown-menu{
+  display: contents;
+  border-color: #4e555b;
+  background-color: #4c4c4c;
+  float: right;
+  position : relative;
+  margin-right: 10px;
+}
+.page-top{
+  color: #c6c8ca;
+}
+.site-logo{
+  padding: 20px;
+}
+.header-section{
+  padding-left: 0px;
+}
+.close{
+  color: white;
+}
+.close:hover{
+  color: #c6c8ca;
+}
+#form_log{
+  font-size: 20px;
+}
+.row_login{
+  padding-top: 1%;
+}
+.p_log{
+  font-size: 10px;
+  color: whitesmoke;
+  margin-bottom: 0px;
+}
+.badge-danger{
+  margin-bottom: 2%;
+}
+#field_log{
+  padding-bottom: 2%;
+}
+.page-top{
+  padding-top: 5%;
+  background-color: black;
+}
+.site-breadcrumb{
+  background-color: #4e555b;
+  font-size: 15px;
+  span{
+    color: #c82333;
+  }
+}

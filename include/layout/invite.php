@@ -14,7 +14,7 @@
 
         <div class="col-lg-12">
             <div class="submit-info">
-                <button class="btn" type="submit">Soumettre</button>
+                <button class="btn" type="submit" id="MyBtn">Soumettre</button>
             </div>
         </div>
     </div>

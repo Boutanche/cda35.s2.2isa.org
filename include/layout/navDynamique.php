@@ -25,7 +25,48 @@
         }
         ?>
         <li class="header-right-btn f-right d-none d-lg-block ml-30">
-            <a href="./index.php?page=authentifier" class="btn header-btn"><?php echo $ar_page_var['authentifier']['menu']; ?></a>
+            <a href="#" class="btn header-btn" id="myBtn"><?php echo $ar_page_var['authentifier']['menu']; ?> </a>
         </li>
     </ul>
 </nav>
+
+<!-- Contact form Start -->
+<div id="login_mod" class="modal" id="myModal">
+    <div class="contact-form-main mt-100 mb-100 modal-content" id="myModal">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="form-wrapper">
+                        <!--Section Tittle  -->
+                        <div class="form-tittle">
+                            <div class="row ">
+                                <div class="col-lg-11 col-md-10 col-sm-10">
+                                    <div class="section-tittle">
+                                        <span>Connexion</span>
+                                        <h2>Uniquement les membres du MCMP_1%</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Section Tittle  -->
+                        <?php include ('./include/layout/invite.php');?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact form End -->
+
+<div id="login_mod">
+    <div class="col-lg-6 modal-content" id="myModal">
+        <form class="hero-form" action="./index.php" method="post">
+            <input type="hidden" name="formulaire" value="log"/>
+            <p><span class="close">&times;</span></p>
+            <input type="text" id="login" name="login" placeholder="Login">
+            <input type="text" id="password" name="password" placeholder="Password">
+
+            <button class="site-btn">Se connecter</button>
+        </form>
+    </div>
+</div>

@@ -2,9 +2,9 @@
 //Superglobal $_GET -> récupération de l'information de l'URL ? page=presentation
     //Les requêtes :
     //TODO : Supprimer Invitation ne sert à rien. C'était juste pour le test.
-    $reponse = $bddovh->query('SELECT * FROM page');
-    $testUser = $bddovh->query('SELECT * FROM invitation');
-    $testAdh = $bddovh->query('SELECT * FROM adherent');
+    $reponse = $bdd->query('SELECT * FROM page');
+    $testUser = $bdd->query('SELECT * FROM invitation');
+    $testAdh = $bdd->query('SELECT * FROM adherent');
     //Initialisation de la variable tableau array() PHP
         //Pour les pages et la navbar :
         $ar_page_var = array();
@@ -44,7 +44,7 @@
                     //est-ce qu'on a une valeur d'id ?
                     if(isset($_GET['id']) && !empty($_GET['id'])){
                         //lancement de la requete
-                        $bddovh->query('DELETE FROM adherent WHERE IdAdherent = '.$_GET['id']);
+                        $bdd->query('DELETE FROM adherent WHERE IdAdherent = '.$_GET['id']);
                     }
                 }
             }

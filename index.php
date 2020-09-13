@@ -1,11 +1,11 @@
 <?php
+session_start();
+//Lancement de la prise en compte des sessions.
     /*
      * Projet Fil Rouge : Moto Club Millau Passion :
      * Le but de ce projet et de démontrer mes compétence et ma compréhension des enjeux du développement web.
      * Ce projet refléte plus mes capacités actuelles et comporte de nombreux tests et applications des TP.
     */
-    //Lancement de la prise en compte des sessions.
-    session_start();
     //par default la page d'accueil d'un site web s'appelle index ici son extension est .php
     /*
      * La page d'affichage par défaul affichée par le navigateur dépend du système d'exploitation il n'est pas
@@ -16,26 +16,37 @@
      * Mais j'ai quand même effectué un test en renomant ma page par défaut, "default" et tout fonctionnait correctement.
     */
     //insertion de la base de données hébergée sous OVH.
-    //On est arrivé à Millau
     include('./config/config.php');
     //mes librairies PHP :
-    //TODO : Effectuer un découpage plus pertient.
+    //Effectuer un découpage plus pertient.
+    //En fait non !!! J'ai essayé et fais des tests de MVC.
+    //J'ai testé Symfony
+    //J'ai testé un design pattern DAO
+    //Ce n'est pas demandé dans ce Jalon.
         //Gestion des formulaire type $_POST
-        //TODO : Se renseigner sur l'architecture MVC.
-        include('./lib/methode_post.php');
+    //*****************************************************************
+    //INCLUDE DE LA GESTION DES GET ET POST RECUPERATIONS DES DONNEES :
+    //*****************************************************************
+        include('./include/mcmp/lib/post/index.php');
         //TODO : J'appelle sur toutes mes pages l'ensemble des requêtes. à Modifier pour l'efficacité.
         //Gestion des formulaire type $_GET
-        include('./lib/methode_get.php');
+        include('./include/mcmp/lib/get/index.php');
     //Encore dans le doute de la structure finale :
     //Découpage "détaillé" au cas je ne réutilise pas tout, partout.
     //TODO : Revoir le découpage. Supprimer les parties innutiles.
+    //*****************************************************************
+    //INCLUDE DU FRONT GESTION DE L'AFFICHAGE POUR L'UTILISATEUR :
+    //*****************************************************************
         //Le Head
-        include ('./include/layout/head.php');
+        include ('./include/mcmp/layout/head.php');
         //Le Preloader
-        include ('./include/layout/preloader.php');
+        include ('./include/mcmp/layout/preloader.php');
         //Le Header
-        include('./include/layout/header.php');
-        //ici ma page specifique
-        include('./include/page/'.$page.'.php');
+        include('./include/mcmp/tmpl/header.php');
+        //Ici ma page specifique
+        //J'organise un minimum mon site :
+        //L'affichage HTML dans "tmpl".
+        //PHP dans "page"
+        include('./include/mcmp/mcmp_page/'.$page.'.php');
         //ici mon footer
-        include('./include/layout/footer.php');
+        include('./include/mcmp/layout/footer.php');

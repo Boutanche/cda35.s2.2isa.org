@@ -26,7 +26,7 @@ if(!empty($_POST)){
             "'.$_POST["tel"].'"
             )';
         echo "Query : ".$query;
-        $bddovh->query($query);
+        $bdd->query($query);
     }
 
     if (isset($_POST['invite']) && $_POST['invite'] == 'inviteform'){
@@ -34,7 +34,7 @@ if(!empty($_POST)){
             //je teste si j'ai des données dans les $_POST
             if (!empty($_POST['pseudo']) and !empty($_POST['password'])) {
                 $query = 'SELECT IdAdherent, Nom, Prenom FROM adherent WHERE Login = "'. $_POST['pseudo'] . '" AND Password = "' . $_POST['password'] . '"';
-                $reponse = $bddovh->query($query);
+                $reponse = $bdd->query($query);
                 //permet de déterminer le nombre d'enregistrement
                 if ($reponse->rowCount() == 1) {
                     //boucle les données récupérées
