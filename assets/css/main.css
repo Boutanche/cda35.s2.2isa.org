@@ -10,7 +10,49 @@
 
 /* line 7, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
 .team-social {
-  padding-bottom: 1%;
+  padding-bottom: 2%;
+}
+
+/* Info-bulle */
+/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+.infobulle {
+  text-decoration: none;
+  position: relative;
+}
+
+/* line 17, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+.infobulle span {
+  display: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  background-color: #eff1f3;
+  font-size: 10px;
+  font-style: italic;
+}
+
+/* line 27, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+.infobulle span i {
+  float: left;
+  margin: 0px 8px 8px 0;
+}
+
+/* line 31, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+.infobulle:hover span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 250px;
+  /* max-width:200px; */
+  min-height: 20px;
+  border: 1px solid black;
+  margin-top: 12px;
+  margin-left: 32px;
+  overflow: hidden;
+  padding: 8px;
 }
 
 /* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
@@ -179,6 +221,12 @@
 /* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_member.scss */
 #members {
   margin-top: 1.5rem;
+}
+
+/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_gallery.scss */
+#gallery {
+  padding-top: 5%;
+  padding-left: 5%;
 }
 
 /*# sourceMappingURL=main.css.map */

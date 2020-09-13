@@ -63,8 +63,6 @@
                                     <!-- Footer Social -->
                                     <div class="footer-social ">
                                         <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                        <a href=""><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
                                         <a href="#"><i class="fab fa-instagram"></i></a>
                                     </div>
                                 </div>
@@ -76,7 +74,6 @@
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-12">
                                 <div class="footer-copy-right text-center">
-
                                     <!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
                                     <p>
                                         Template Bootstrap : Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -153,8 +150,10 @@
         <!-- Jquery Plugins, main Jquery -->
         <script src="./assets/js/plugins.js"></script>
         <!-- WYSIWYG -->
+        <!--
         <script src="./vendor/Trumbowyg-master/dist/trumbowyg.min.js"></script>
         <script src="./vendor/summernote-0.8.18-dist/summernote.min.js"></script>
+        -->
         <!-- Mon Js Perso update template-->
         <script src="./assets/js/main.js?v=1.<?php echo time(); ?>"></script>
 

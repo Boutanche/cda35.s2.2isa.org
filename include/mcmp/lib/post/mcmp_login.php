@@ -7,28 +7,45 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
             $thisAdherent = new Adherent($daoAdherent->findByLogin($_POST['login_Log']));
             $isPasswordCorrect = password_verify($_POST['password_Log'], $thisAdherent->getPassword());
             if ($isPasswordCorrect){
-
                 /* ------------------------------------------
                  * ------------------------------------------
-                 * Je voulais Récupérer l'ID de l'adhérent :
-                 * Il y a visiblement un soucis ici :
+                 * BUG : RECUPERATION ID ADHERENT :
                  * ------------------------------------------
                  * ------------------------------------------
                         //TODO : Régler le pbm : $ThisIdAdherent = Null :
-                        echo "Coucou";
-                        echo $prenom;
-                        echo $thisAdherent->getIdAdherent();
-                        $idConnected = $thisAdherent->getIdAdherent();
-                -------------------------------------------*/
-                /* ------------------------------------------
-                 * Contournement du problême
+                        //TODO : PBM : AdherentDAO.php et constructeur de Adherent.php
+                        //TODO !
+                            /*
+                            echo $prenom;
+                            echo $thisAdherent->getIdAdherent();
+                            $idConnected = $thisAdherent->getIdAdherent();
+                            */
+                /*-------------------------------------------
                  * ------------------------------------------
-                 ------------------------------------------*/
-                $reqSOS = $bdd->prepare('SELECT IdAdherent FROM mcmp_adherent WHERE Login = :login');
-                $reqSOS->bindValue(':login', $thisAdherent->getLogin());
-                $reqSOS->execute();
-                $id = $reqSOS->fetch();
-
+                 * BUG NON RESOLU :
+                 * ------------------------------------------
+                 * ------------------------------------------
+                     * ------------------------------------------
+                     * SOLUTION TEMPORAIRE ----------------------
+                     * ------------------------------------------
+                     * BUG-FIX de _benoit 13/09/2020 : "php à l'ancienne" pour récupération Id de Adherent.
+                     * ------------------------------------------
+                        ------------------------------------------*/
+                        $reqSOS = $bdd->prepare('SELECT IdAdherent FROM mcmp_adherent WHERE Login = :login');
+                        $reqSOS->bindValue(':login', $thisAdherent->getLogin());
+                        $reqSOS->execute();
+                        $id = $reqSOS->fetch();
+                        //**Fin Résulution d'un bug par l'application d'un "pansement pas propre" : **//
+                        //Je ne suis absoluement pas satisfait de cette partie du code.
+                        //Necessaire pour livraison.
+                        //TODO : A CORRIGER RAPIDEMENT :
+                        /*-----------------------------------------*/
+                /*-------------------------------------------
+                 * ------------------------------------------
+                 * FIN DE BUG :
+                 * SOLUTION RAPIDE ET TEMPORAIRE : "php à l'ancienne".
+                 * ------------------------------------------
+                    ------------------------------------------*/
                 $nom = $thisAdherent->getNom();
                 $prenom = $thisAdherent->getPrenom();
                 $idConnected = $id['IdAdherent'];
@@ -37,6 +54,16 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
                 $_SESSION['prenom'] = $prenom;
                 $_SESSION['id_adherent'] = $id['IdAdherent'];
                 $user_level = 1;
+                //TODO : REGLES DE GESTION DES UTILISATEURS ET DES ROLES :
+                //TODO : non-connecté ->prospect ->membre -> organisateur -> trésorier ->secrétaire ->président
+                //J'avais anticipé : 2 roles en plus du visiteur non connecté :
+                //1 : Membre :
+                //2 : Organisateur :
+                //TODO : Reste à gérer :
+                //      Un organisateur peut être : Président, Secrétaire, Trésorier
+                //  3 : Un visiteur peut s'inscrire au site et devenir un "Prospect" :
+                //  Il accède aux mêmes droits qu'on membre.
+                //  Le plus simple serait de modifier la BDD.
                 if ($thisAdherent->getIdRole() >= 2) {
                     $user_level = 2;
                 }
