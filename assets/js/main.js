@@ -269,8 +269,18 @@
     });
     //stopper le comportement normal d'une balise de type <a>
     return false;
+  });
+  //Ajax modifier la news :
+  $('.link_modify').on("click", function () {
+    console.log('Tu vas fonctionner oui ?')
+    //$('#myModal').show();
+  });
+  $('.close').on("click", function () {
+    $('#myModal').hide();
+    $('#modifNews_close').hide();
 
   });
+
 
 
 

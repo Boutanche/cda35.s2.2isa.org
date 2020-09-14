@@ -44,3 +44,7 @@
   overflow:hidden;
   padding:8px;
 }
+a:not([href]) {
+  color: white;
+  text-decoration: none;
+}

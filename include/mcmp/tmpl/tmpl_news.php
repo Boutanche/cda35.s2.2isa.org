@@ -16,9 +16,9 @@ $thisNews = $post_ThisNews->fetch();
                     <h2><?php echo $thisNews['Titre']?></h2>
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-2 col-md-3">
-                <a href="#" class="btn wantToWork-btn f-right">Modifier</a>
-            </div>
+            <?php if($user_level == 2){
+                include './include/mcmp/tmpl/modal.php';
+            }?>
         </div>
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6">

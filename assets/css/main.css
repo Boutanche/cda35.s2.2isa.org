@@ -56,6 +56,12 @@
   padding: 8px;
 }
 
+/* line 47, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
+a:not([href]) {
+  color: white;
+  text-decoration: none;
+}
+
 /* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .slider-area, .slider-area2 {
   background-image: url("../../img/hero/h1_moto001.png");
