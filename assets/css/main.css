@@ -262,7 +262,9 @@
 
 /* line 5, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_map.scss */
 .map {
+  padding-top: 10%;
   padding-bottom: 2%;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

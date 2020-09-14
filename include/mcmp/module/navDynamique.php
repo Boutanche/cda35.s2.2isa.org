@@ -19,7 +19,8 @@
         <?php }?>
     </li>
 </ul>
-
+<!-- BUG -->
+<!-- TODO : BUGFIX : Modal "login_mod" ne s'affiche pas en affichage mobil -->
 <div id="login_mod">
     <div class="col-12 modal-content" id="myModal">
         <form class="hero-form" action="./index.php" method="post">
@@ -43,8 +44,6 @@
                         <input type="password" id="password" name="password_Log" placeholder="Password" required>
                     </div>
                 </div>
-
-
                 <p class="p_log"><?php echo $message_log;?></p>
                 <p class="p_log">Si vous n'êtes pas membre MCMP :</p>
                 <p class="p_log">vous inscrire en Prospect <a class="lien" href="#">: ICI :</a></p>
@@ -53,4 +52,4 @@
         </form>
     </div>
 </div>
-
+<!-- BUG -->

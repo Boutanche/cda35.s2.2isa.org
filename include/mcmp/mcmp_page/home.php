@@ -28,5 +28,6 @@
     <!--? Blog Area Start -->
     <?php //include ('./include/layout/blogzone.php');?>
     <!-- Blog Area End -->
+    <?php include './include/mcmp/tmpl/contact.php'?>
     <?php include './include/mcmp/tmpl/map.php'?>
 </main>

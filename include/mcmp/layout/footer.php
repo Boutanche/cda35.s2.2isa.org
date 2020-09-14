@@ -154,6 +154,7 @@
         <script src="./vendor/Trumbowyg-master/dist/trumbowyg.min.js"></script>
         <script src="./vendor/summernote-0.8.18-dist/summernote.min.js"></script>
         -->
+
         <!-- Mon Js Perso update template-->
         <script src="./assets/js/main.js?v=1.<?php echo time(); ?>"></script>
 

@@ -165,7 +165,6 @@
       $(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
       });
 
-
 /* 10. WOW active */
     new WOW().init();
 
@@ -174,7 +173,6 @@
       $('#mc_embed_signup').find('form').ajaxChimp();
     }
     mailChimp();
-
 
 // 12 Pop Up Img
     var popUp = $('.single_gallery_part, .img-pop-up');
@@ -217,8 +215,6 @@
       Menu Modal.
    --------------------*/
 
-  
-
   //Gestion Modal Log :
   $('.myBtn').on("click", function () {
     $('#myModal').show();
@@ -226,6 +222,39 @@
   $('.close').on("click", function () {
     $('#myModal').hide();
     $('#modifNews_close').hide();
+
+  });
+  /*------------------
+        Mail.
+  --------------------*/
+
+  //envoyer un e-mail :
+  $('#sendmail .btn').on('click', function(){
+    console.log('btn sendmail ready !');
+    var name = $('#sendmail input[name=name]').val();
+    var email = $('#sendmail input[name=email]').val();
+    var message = $('#sendmail textarea').val();
+    //methode Ajax
+    var request = $.ajax({
+      url: "./lib/methode_ajax.php",
+      method: "POST",
+      data: { sendmail : 1, name:name, email : email, message:message },
+      dataType: "json" //JSON = reponse attendu en array() ou HTML, reponse de type string
+    });
+    //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
+    request.done(function( msg ) {
+      //console.log(msg);
+      //afichage de la modal ave
+      $('#my-modal .modal-body p').html(msg.modal);
+      $("#my-modal").show();
+      //$( "#log" ).html( msg );
+    });
+    //erreur 404 ou 500 - le serveur ne repond pas, erreur PHP ?
+    request.fail(function( jqXHR, textStatus ) {
+      console.log( "Request failed: " + textStatus );
+    });
+    //stopper le comportement normal d'une balise de type <a>
+    return false;
 
   });
 

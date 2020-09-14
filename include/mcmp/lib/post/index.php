@@ -6,5 +6,8 @@ if(!empty($_POST)) {
         } elseif ($_POST['formulaire'] == 'login_mcmp') {
             include './include/mcmp/lib/post/mcmp_login.php';
         }
+        elseif (isset($_POST['formulaire'])&& $_POST['formulaire'] == 'form_contact'){
+
+        }
     }
 }
