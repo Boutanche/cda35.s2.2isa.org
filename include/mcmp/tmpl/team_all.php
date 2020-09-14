@@ -38,7 +38,7 @@
                                             }
                                         }?>
                                     </span>
-                                    <h3><a href="<?php ?>"><?php echo $tb_adherent['Nom'];?></a></h3>
+                                    <h3><a href="page-membres-<?php echo $tb_adherent['IdAdherent'];?>"><?php echo $tb_adherent['Nom'];?></a></h3>
                                     <!-- Blog Social -->
                                     <div class="team-social">
                                         <ul>
