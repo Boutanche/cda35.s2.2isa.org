@@ -14,3 +14,24 @@
   padding: 5% 2% 2% 5%;
   position: relative;
 }
+.contact-form-main #contact-form input {
+  text-transform: none;
+}
+.contact-form-main #contact-form textarea {
+  text-transform: none;
+}
+
+#my-modalito{
+  display: none;
+  background: rgba(0,0,0,0.5);
+  padding-top: 10px;
+  position: absolute;
+  height: 60px;
+  width: 600px;
+  input{
+    height: 25px;
+  }
+  p{
+    color: white;
+  };
+}

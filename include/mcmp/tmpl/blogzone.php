@@ -11,6 +11,8 @@
             </div>
         </div>
         <div class="row">
+
+
             <?php include './include/mcmp/lib/request/all_news.php'?>
             <?php foreach ($ar_News as $key => $tb_news) {
             if ($tb_news['Code'] == 1) {?>
@@ -26,7 +28,7 @@
                             </div>
                             <div class="blog-cap">
                                 <span><?php echo $tb_news['Titre'] ?></span>
-                                <h3><a href="blog_details.html" data-id='<?php echo $tb_news['IdArticle'];?>'> <?php echo $tb_news['Description'] ?></a></h3>
+                                <h3><a href="page-info-<?php echo $tb_news['IdArticle'];?>" data-id='<?php echo $tb_news['IdArticle'];?>'> <?php echo $tb_news['Description'] ?></a></h3>
                             </div>
                         </div>
                     </div>

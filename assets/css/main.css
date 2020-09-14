@@ -1,27 +1,27 @@
 @charset "UTF-8";
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .btn:hover {
   color: #c6c8ca;
 }
 
-/* line 4, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 4, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 #btn_log {
   padding: 15px 20px;
 }
 
-/* line 7, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 7, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .team-social {
   padding-bottom: 2%;
 }
 
 /* Info-bulle */
-/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 13, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .infobulle {
   text-decoration: none;
   position: relative;
 }
 
-/* line 17, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 17, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .infobulle span {
   display: none;
   -moz-border-radius: 6px;
@@ -33,13 +33,13 @@
   font-style: italic;
 }
 
-/* line 27, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 27, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .infobulle span i {
   float: left;
   margin: 0px 8px 8px 0;
 }
 
-/* line 31, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_button.scss */
+/* line 31, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_button.scss */
 .infobulle:hover span {
   display: block;
   position: absolute;
@@ -56,43 +56,52 @@
   padding: 8px;
 }
 
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .slider-area, .slider-area2 {
   background-image: url("../../img/hero/h1_moto001.png");
 }
 
-/* line 4, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 4, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .header-btn {
   margin-top: 25px;
 }
 
-/* line 9, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 8, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+.header-transparent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* line 17, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #navigation a.active {
   color: red;
   text-decoration: underline;
 }
 
-/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 21, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #navigation a {
   color: whitesmoke;
 }
 
-/* line 16, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 24, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #navigation a:hover {
   color: red;
 }
 
-/* line 19, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 27, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #navigation .btn:hover {
   color: #212529;
 }
 
-/* line 23, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 31, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .modal {
   display: none;
 }
 
-/* line 26, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 34, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .modal-content {
   display: none;
   color: white;
@@ -100,24 +109,24 @@
   padding-top: 5px;
 }
 
-/* line 32, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 40, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .btn-modal {
   color: white;
   background-color: black;
   border-color: #4e555b;
 }
 
-/* line 37, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 45, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .btn-modal:hover {
   background-color: #c82333;
 }
 
-/* line 40, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 48, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .btn-modal:active {
   background-color: #c82333;
 }
 
-/* line 43, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 51, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #modal_log {
   padding-top: 10px;
   position: absolute;
@@ -125,22 +134,22 @@
   width: 600px;
 }
 
-/* line 48, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 56, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #modal_log input {
   height: 25px;
 }
 
-/* line 51, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 59, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #modal_log p {
   color: white;
 }
 
-/* line 55, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 63, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #login_mod {
   position: fixed;
 }
 
-/* line 58, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 66, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .dropdown-menu {
   display: contents;
   border-color: #4e555b;
@@ -150,117 +159,147 @@
   margin-right: 10px;
 }
 
-/* line 66, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 74, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .page-top {
   color: #c6c8ca;
 }
 
-/* line 69, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 77, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-logo {
   padding: 20px;
 }
 
-/* line 72, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 80, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .header-section {
   padding-left: 0px;
 }
 
-/* line 75, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 83, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .close {
   color: white;
 }
 
-/* line 78, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 86, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .close:hover {
   color: #c6c8ca;
 }
 
-/* line 81, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 89, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #form_log {
   font-size: 20px;
 }
 
-/* line 84, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 92, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .row_login {
   padding-top: 1%;
 }
 
-/* line 87, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 95, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .p_log {
   font-size: 10px;
   color: whitesmoke;
   margin-bottom: 0px;
 }
 
-/* line 92, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 100, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .badge-danger {
   margin-bottom: 2%;
 }
 
-/* line 95, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 103, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #field_log {
   padding-bottom: 2%;
 }
 
-/* line 98, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 106, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .page-top {
   padding-top: 5%;
   background-color: black;
 }
 
-/* line 102, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 110, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-breadcrumb {
   background-color: #4e555b;
   font-size: 15px;
 }
 
-/* line 105, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_header.scss */
+/* line 113, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-breadcrumb span {
   color: #c82333;
 }
 
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_member.scss */
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_member.scss */
 #members {
   margin-top: 1.5rem;
 }
 
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_gallery.scss */
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_gallery.scss */
 #gallery {
   padding-top: 5%;
   padding-left: 5%;
 }
 
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
 #admin_form {
   padding-left: 1%;
   padding-top: 1%;
 }
 
-/* line 5, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+/* line 5, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
 #img_form {
   padding-top: 5%;
   padding-left: 5%;
 }
 
-/* line 9, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+/* line 9, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
 #form_title {
   padding-top: 5%;
   padding-bottom: 1%;
 }
 
-/* line 13, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_admin.scss */
+/* line 13, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
 #inscription_Membre-form {
   padding: 5% 2% 2% 5%;
   position: relative;
 }
 
-/* line 1, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_map.scss */
+/* line 17, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
+.contact-form-main #contact-form input {
+  text-transform: none;
+}
+
+/* line 20, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
+.contact-form-main #contact-form textarea {
+  text-transform: none;
+}
+
+/* line 24, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
+#my-modalito {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  position: absolute;
+  height: 60px;
+  width: 600px;
+}
+
+/* line 31, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
+#my-modalito input {
+  height: 25px;
+}
+
+/* line 34, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
+#my-modalito p {
+  color: white;
+}
+
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_map.scss */
 #map {
   /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
   height: 510px;
 }
 
-/* line 5, ../../wamp/www/cda35.s1.2isa.org/assets/css/sass/_map.scss */
+/* line 5, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_map.scss */
 .map {
   padding-top: 10%;
   padding-bottom: 2%;

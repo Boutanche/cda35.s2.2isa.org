@@ -32,12 +32,15 @@
                                     <textarea name="message" placeholder="Your messages"></textarea>
                                 </div>
                             </div>
+                            <!-- TODO : BUG affichage de la modale "OK" ne fonctionne pas-->
+                            <!-- Attention les messages sont bien envoyés ... -->
                             <div class="row" id="sendmail">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="submit-info">
                                         <button class="btn">
                                         <a href="" class="primary-btn signup-btn">Message</a>
                                         </button>
+                                        <p id="#maTraceModalito">Attention</p>
                                     </div>
                                 </div>
                             </div>

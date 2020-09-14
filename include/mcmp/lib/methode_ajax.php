@@ -1,9 +1,9 @@
 <?php
 //démarage des sessions
-session_start();
+
 //mon fichier config PDO, base de données
 include('../../../config/config.php');
-include('./include/mcmp/lib/mcmp_function.php');
+include('./mcmp_function.php');
 $msg = array();
 /*
 if($user_level == 2){

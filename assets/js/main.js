@@ -224,6 +224,19 @@
     $('#modifNews_close').hide();
 
   });
+  //Gestion Modal Message :
+  //TODO : Ne fonctione pas : Corriger ce BUG !
+  //#my modalito est dans tmpl/modal.php
+  //appel depuis layout/preloader.php
+  //On gere les boutons qui ferme/cache la modal
+  $('#my-modalito .modal-footer button, #my-modalito .close').on('click', function(){
+    $("#my-modalito").hide();
+  });
+  //on affiche la fenetre modal si on a du contenu entre les balises P
+  if($('#my-modalito .modal-body p').html().length){
+    $("#my-modalito").show();
+  }
+
   /*------------------
         Mail.
   --------------------*/
@@ -231,12 +244,12 @@
   //envoyer un e-mail :
   $('#sendmail .btn').on('click', function(){
     console.log('btn sendmail ready !');
-    var name = $('#sendmail input[name=name]').val();
-    var email = $('#sendmail input[name=email]').val();
-    var message = $('#sendmail textarea').val();
+    var name = $('#contact-form input[name=name]').val();
+    var email = $('#contact-form input[name=email]').val();
+    var message = $('#contact-form textarea').val();
     //methode Ajax
     var request = $.ajax({
-      url: "./lib/methode_ajax.php",
+      url: "./include/mcmp/lib/methode_ajax.php",
       method: "POST",
       data: { sendmail : 1, name:name, email : email, message:message },
       dataType: "json" //JSON = reponse attendu en array() ou HTML, reponse de type string
@@ -244,9 +257,10 @@
     //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
     request.done(function( msg ) {
       //console.log(msg);
+      $('#maTraceModalito p').html("Message envoyé.")
       //afichage de la modal ave
-      $('#my-modal .modal-body p').html(msg.modal);
-      $("#my-modal").show();
+      $('#my-modalito .modal-body p').html(msg.modal);
+      $("#my-modalito").show();
       //$( "#log" ).html( msg );
     });
     //erreur 404 ou 500 - le serveur ne repond pas, erreur PHP ?

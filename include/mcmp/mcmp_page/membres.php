@@ -1,4 +1,3 @@
-
-<?php
-include './include/mcmp/tmpl/team_all.php';
-?>
+<main>
+<?php include './include/mcmp/tmpl/team_all.php'; ?>
+</main>
