@@ -40,13 +40,13 @@
                             <div class="col-8">
                                 <div class="submit-info">
                                     <button class="btn">
-                                        <a href="" class="primary-btn signup-btn">Message</a>
+                                        <a href="" class="primary-btn signup-btn">Modif News</a>
                                     </button>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="boutons">
-                                    <a class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</a>
+                                    <button id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</button>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,3 @@
-<main>
 <?php include './include/mcmp/module/breadcrumb.php'; ?>
     <section class="wantToWork-area w-padding">
         <div class="container">
@@ -9,9 +8,22 @@
                         <h2>Les plus excpérimentés à votre service</h2>
                     </div>
                 </div>
+                <?php
+                if ($user_level >= 1){ ?>
                 <div class="col-xl-2 col-lg-2 col-md-3">
-                    <a href="services.php" class="btn wantToWork-btn f-right">Connexion</a>
+                    <div id="content">
+                        <p>
+                            <label for="recherche">Rechercher un membre : </label>
+                            <input type="text" name="recherche" id="recherche"
+                        </p>
+                        <div id="">
+                        </div>
+                        <div id="result_recherche">
+                            ICI LES RESULTATS :
+                        </div>
+                    </div>
                 </div>
+                <?php }?>
             </div>
         </div>
     </section>
@@ -64,4 +76,3 @@
             </div>
         </div>
     </div>
-</main>

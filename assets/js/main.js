@@ -229,13 +229,13 @@
   //#my modalito est dans tmpl/modal.php
   //appel depuis layout/preloader.php
   //On gere les boutons qui ferme/cache la modal
-  $('#my-modalito .modal-footer button, #my-modalito .close').on('click', function(){
-    $("#my-modalito").hide();
-  });
+  //$('#my-modalito .modal-footer button, #my-modalito .close').on('click', function(){
+  //  $("#my-modalito").hide();
+  //});
   //on affiche la fenetre modal si on a du contenu entre les balises P
-  if($('#my-modalito .modal-body p').html().length){
-    $("#my-modalito").show();
-  }
+  //if($('#my-modalito .modal-body p').html().length){
+  //  $("#my-modalito").show();
+  //}
 
   /*------------------
         Mail.
@@ -244,6 +244,7 @@
   //envoyer un e-mail :
   $('#sendmail .btn').on('click', function(){
     console.log('btn sendmail ready !');
+    $('#maTraceModalito').html("Message envoyé.")
     var name = $('#contact-form input[name=name]').val();
     var email = $('#contact-form input[name=email]').val();
     var message = $('#contact-form textarea').val();
@@ -257,9 +258,9 @@
     //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
     request.done(function( msg ) {
       //console.log(msg);
-      $('#maTraceModalito p').html("Message envoyé.")
+      $('#maTraceModalito').html("Message envoyé.")
       //afichage de la modal ave
-      $('#my-modalito .modal-body p').html(msg.modal);
+      $('#mmaTraceModalito').html(msg.modal);
       $("#my-modalito").show();
       //$( "#log" ).html( msg );
     });
@@ -270,18 +271,23 @@
     //stopper le comportement normal d'une balise de type <a>
     return false;
   });
-  //Ajax modifier la news :
-  $('.link_modify').on("click", function () {
-    console.log('Tu vas fonctionner oui ?')
-    //$('#myModal').show();
+  //Ajax Rechercher un membre :
+  $(document).ready(function(){
+    //Tester saisie dans champ de recherche :
+    $('#recherche').keyup(function () {
+      var $field;
+      $field = $ (this);
+      if ($field.val().length>0){
+        $.ajax({
+          type : 'POST',
+          url: './include/mcmp/lib/ajax_search.php',
+          data : 'recherche='+$(this).val(),
+          success : function (data) {
+            $('#result_recherche').html(data);
+          }
+        });
+      }
+    });
   });
-  $('.close').on("click", function () {
-    $('#myModal').hide();
-    $('#modifNews_close').hide();
-
-  });
-
-
-
 
 })(jQuery);
