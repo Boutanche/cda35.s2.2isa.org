@@ -312,4 +312,10 @@ a:not([href]) {
   z-index: 1;
 }
 
+/* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_mydialog.scss */
+#mydialog {
+  margin-left: 5%;
+  padding-top: 10%;
+}
+
 /*# sourceMappingURL=main.css.map */

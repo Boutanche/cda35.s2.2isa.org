@@ -9,8 +9,8 @@ $thisNews = $post_ThisNews->fetch();
 <section class="home-blog-area section-padding30">
     <div class="container">
         <!-- Section Tittle -->
-        <div class="row justify-content-center">
-            <div class="col-lg-7 col-md-9 col-sm-10">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
                 <div class="section-tittle text-center mb-100">
                     <span>Actualités</span>
                     <h2><?php echo $thisNews['Titre']?></h2>

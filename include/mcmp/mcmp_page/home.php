@@ -15,7 +15,7 @@
     <?php //include('./include/layout/photo.php');?>
     <!-- Gallery Area End -->
     <!--? Want To work -->
-    <?php include ('./include/mcmp/tmpl/team.php');?>
+    <?php include ('./include/mcmp/tmpl/areaTeam.php');?>
     <!--? Promo Start -->
     <?php //include ('./include/layout/promo.php');?>
     <!-- Promo End -->
