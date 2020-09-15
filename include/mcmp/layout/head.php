@@ -45,7 +45,7 @@
 
     <!-- TEST SMTP CHIMP-->
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/bd30a74f0be2497c8b6a8ff3c/cdab8e928b8138274d10003aa.js");</script>
-    <!-- Matomo -->
+    <!-- Matomo Ajouté le 15/09/2020-->
     <script type="text/javascript">
         var _paq = window._paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
