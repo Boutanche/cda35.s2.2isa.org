@@ -9,8 +9,8 @@ if(!empty($_POST)) {
         elseif (isset($_POST['formulaire'])&& $_POST['formulaire'] == 'form_contact'){
 
         }
-        elseif (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
-            include './include/mcmp/lib/post/upload_img.php';
-        }
+    }
+    elseif (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
+        include './include/mcmp/lib/post/upload_img.php';
     }
 }

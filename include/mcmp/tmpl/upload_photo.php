@@ -1,3 +1,4 @@
+
 <section class="wantToWork-area w-padding">
     <div class="container">
         <div class="col-xl-6 col-lg-6 col-md-6">
@@ -17,33 +18,34 @@
                             </div>
                         </div>
                         <!--End Section Tittle  -->
-                        <form id="modify_news" action="#">
+                        <!-- START : Formulaire : Poster une photo sous un article : -->
+                        <form class="form-contact comment_form" action="./index.php?page=galerie" id="Post_Img_Form" enctype="multipart/form-data" method="post">
+                            <input type="hidden" name="post_img" value="add_img"/>
+                            <input type="hidden" name="news_id" value="" id="newsfrId"/>
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="form-box user-icon mb-30">
-                                        <input type="text" name="addPhoto_Title" placeholder="Titre de la Photo">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-box user-icon mb-30">
-                                        <input type="text" name="md_description" placeholder="Modifier la description">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-box user-icon mb-30">
-                                        <textarea name="md_detail" placeholder="Modifier le texte"></textarea>
-                                    </div>
-                                </div>
-                                <!-- TODO : BUG affichage de la modale "OK" ne fonctionne pas-->
-                                <!-- Attention les messages sont bien envoyés ... -->
-                                <div class="row" id="md_article">
-                                    <div class="col-8">
-                                        <div class="submit-info">
-                                            <button class="btn">
-                                                <a href="" class="primary-btn signup-btn">Modif News</a>
-                                            </button>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <div class="form-box mb-30">
+                                            <input type="text" name="name_img" placeholder="Nom du Fichier">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div  class="form-box mb-30">
+                                            <label>Téléverser une image : </label>
+                                            <input type="file" name="news_img" id="this_img" placeholder="Votre image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success">Poster une Photo</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- END : Formulaire : Poster une Photo sous un article -->
                                     <div class="col-2">
                                         <div class="boutons">
                                             <button id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</button>
@@ -57,6 +59,7 @@
             </div>
         </div>
         <script>
+            //TODO ? DEPLACE ça :
             var $dialog = document.getElementById('photo_dialog');
             if(!('show' in $dialog)){
                 document.getElementById('promptCompat').className = 'no_dialog';
