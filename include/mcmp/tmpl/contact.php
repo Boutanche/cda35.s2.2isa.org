@@ -40,7 +40,7 @@
                                         <button class="btn">
                                         <a href="" class="primary-btn signup-btn">Message</a>
                                         </button>
-                                        <div id="#maTraceModalito">Attention : Message envoyé. BUG "Afficher OK!"</div>
+                                        <div id="#maTraceModalito">Attention : BUG "Afficher OK!"</div>
                                     </div>
                                 </div>
                             </div>

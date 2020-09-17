@@ -71,8 +71,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-2">
-
-        </div>
     </div>
+    <?php if($user_level >= 2){
+        include './include/mcmp/tmpl/upload_photo.php';
+    }?>
 </div>

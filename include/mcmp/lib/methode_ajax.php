@@ -6,7 +6,11 @@ include('../../../config/config.php');
 include('./mcmp_function.php');
 $msg = array();
 if(isset($_POST['sendmail']) && $_POST['sendmail'] == 1) {
-    $msg['modal'] = sendMail($_POST['name'], $_POST['email'], $_POST['message']);
+    $dest = htmlspecialchars(str_replace('\n', '',$_POST['email']));
+    $objet = htmlspecialchars(str_replace('\n', '',$_POST['message']));
+    //$contenu = htmlspecialchars(str_replace('\n', '',$_POST['user_message']));
+    $emeteur = htmlspecialchars(str_replace('\n', '',$_POST['name']));
+    $msg['modal'] = sendMail($emeteur, $dest, $objet);
 }else{
     $msg['modal'] = 'Vous n\'etes pas authorisé à appeller cette methode.';
 }

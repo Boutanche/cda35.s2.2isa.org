@@ -2,11 +2,17 @@
 require_once './include/mcmp/lib/manager/AdherentDAO.php';
 if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
     if (!empty($_POST['login_Log']) and !empty($_POST['password_Log'])) {
+        //Lutter contre la faille XSS :
+        $xssLog = htmlspecialchars($_POST['login_Log']);
+        $xssPass = htmlspecialchars($_POST['password_Log']);
+        $strReplaceLog = str_replace('\n',"",$xssLog);
+        $strReplacePass = str_replace('\n',"",$xssPass);
         $daoAdherent = new AdherentDAO($bdd);
-        if ($daoAdherent->exists_Log($_POST['login_Log'])) {
-            $thisAdherent = new Adherent($daoAdherent->findByLogin($_POST['login_Log']));
-            $isPasswordCorrect = password_verify($_POST['password_Log'], $thisAdherent->getPassword());
+        if ($daoAdherent->exists_Log($strReplaceLog)) {
+            $thisAdherent = new Adherent($daoAdherent->findByLogin($strReplaceLog));
+            $isPasswordCorrect = password_verify($strReplacePass, $thisAdherent->getPassword());
             if ($isPasswordCorrect){
+                sleep(1); // Just For Wait
                 /* ------------------------------------------
                  * ------------------------------------------
                  * BUG : RECUPERATION ID ADHERENT :
@@ -76,11 +82,12 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
             }
             else{
                 $message_log ="Mauvais mot de passe";
+                sleep(3);
             }
         } else {
             $message_log = "Mauvais identifiant";
             $page = $homepage;
-            sleep(1);
+            sleep(3);
         }
     }
 }

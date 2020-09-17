@@ -208,13 +208,11 @@
   $(".snake").snakeify({
     speed: 200
   });
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////// Mon JS : /////////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  // Mon JS :
-  //
-  /*------------------
-      Menu Modal.
-   --------------------*/
-
+  /////////////////////////////LOGIN :
   //Gestion Modal Log :
   $('.myBtn').on("click", function () {
     $('#myModal').show();
@@ -222,7 +220,6 @@
   $('.close').on("click", function () {
     $('#myModal').hide();
     $('#modifNews_close').hide();
-
   });
   //Gestion Modal Message :
   //TODO : Ne fonctione pas : Corriger ce BUG !
@@ -237,14 +234,11 @@
   //  $("#my-modalito").show();
   //}
 
-  /*------------------
-        Mail.
-  --------------------*/
-
+  /////////////////////////////MAIL :
   //envoyer un e-mail :
   $('#sendmail .btn').on('click', function(){
     console.log('btn sendmail ready !');
-    $('#maTraceModalito').html("Message envoyé.")
+    //$('#maTraceModalito').html("Message envoyé.")
     var name = $('#contact-form input[name=name]').val();
     var email = $('#contact-form input[name=email]').val();
     var message = $('#contact-form textarea').val();
@@ -258,10 +252,10 @@
     //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
     request.done(function( msg ) {
       //console.log(msg);
-      $('#maTraceModalito').html("Message envoyé.")
+      //$('#maTraceModalito').html("Message envoyé.")
       //afichage de la modal ave
-      $('#mmaTraceModalito').html(msg.modal);
-      $("#my-modalito").show();
+      $('#maTraceModalito').html(msg.modal);
+      //$("#my-modalito").show();
       //$( "#log" ).html( msg );
     });
     //erreur 404 ou 500 - le serveur ne repond pas, erreur PHP ?
@@ -271,6 +265,7 @@
     //stopper le comportement normal d'une balise de type <a>
     return false;
   });
+  /////////////////////////////MEMBRES :
   //Ajax Rechercher un membre :
   $(document).ready(function(){
     //Tester saisie dans champ de recherche :

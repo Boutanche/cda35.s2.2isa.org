@@ -1,3 +1,4 @@
+
 <div class="gallery-area">
     <div class="container-fluid p-0 fix">
         <div class="row">

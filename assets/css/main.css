@@ -245,6 +245,13 @@ a:not([href]) {
   padding-left: 5%;
 }
 
+/* line 5, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_gallery.scss */
+#photo_dialog {
+  padding-left: 1%;
+  z-index: 10;
+  position: absolute;
+}
+
 /* line 1, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_admin.scss */
 #admin_form {
   padding-left: 1%;

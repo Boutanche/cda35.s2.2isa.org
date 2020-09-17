@@ -26,13 +26,23 @@
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                                 <div class="single-footer-caption mb-50">
                                     <div class="footer-tittle">
-                                        <h4>HORAIRE</h4>
-                                        <ul>
-                                            <li><a href="#">Lundi : 12h_14h</a></li>
-                                            <li><a href="#">Mardi // Vendredi : 16h_20h</a></li>
-                                            <li><a href="#">Samedi : 10h_18h</a></li>
-                                            <li><a href="#">Nous contacter</a></li>
-                                        </ul>
+                                        <h4>METEO</h4>
+
+                                        <!-- weather widget start -->
+                                        <!-- widget meteo -->
+                                        <div id="widget_88fa3ad583f964cae1eb19e46f30b5da">
+                                            <span id="t_88fa3ad583f964cae1eb19e46f30b5da">Météo Millau</span>
+                                            <span id="l_88fa3ad583f964cae1eb19e46f30b5da"><a href="http://www.mymeteo.info/r/millau_h">https://www.my-meteo.com</a></span>
+                                            <script type="text/javascript">
+                                                (function() {
+                                                    var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+                                                    my.src = "https://services.my-meteo.com/widget/js?ville=4718&format=vertical&nb_jours=3&temps&icones&vent&c1=393939&c2=a9a9a9&c3=e6e6e6&c4=ffffff&c5=00d2ff&c6=d21515&police=0&t_icones=1&x=160&y=321&d=0&id=88fa3ad583f964cae1eb19e46f30b5da";
+                                                    var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+                                                })();
+                                            </script>
+                                        </div>
+                                            <!-- widget meteo -->
+
                                     </div>
                                 </div>
                             </div>
