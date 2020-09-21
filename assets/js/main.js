@@ -221,21 +221,9 @@
     $('#myModal').hide();
     $('#modifNews_close').hide();
   });
-  //Gestion Modal Message :
-  //TODO : Ne fonctione pas : Corriger ce BUG !
-  //#my modalito est dans tmpl/modal.php
-  //appel depuis layout/preloader.php
-  //On gere les boutons qui ferme/cache la modal
-  //$('#my-modalito .modal-footer button, #my-modalito .close').on('click', function(){
-  //  $("#my-modalito").hide();
-  //});
-  //on affiche la fenetre modal si on a du contenu entre les balises P
-  //if($('#my-modalito .modal-body p').html().length){
-  //  $("#my-modalito").show();
-  //}
 
   /////////////////////////////MAIL :
-  //envoyer un e-mail :
+  //Envoyer un e-mail :
   $('#sendmail .btn').on('click', function(){
     console.log('btn sendmail ready !');
     //$('#maTraceModalito').html("Message envoyé.")
@@ -253,7 +241,7 @@
     request.done(function( msg ) {
       //console.log(msg);
       //$('#maTraceModalito').html("Message envoyé.")
-      //afichage de la modal ave
+      //Affichage de la modal avec :
       $('#maTraceModalito').html(msg.modal);
       //$("#my-modalito").show();
       //$( "#log" ).html( msg );
@@ -265,6 +253,7 @@
     //stopper le comportement normal d'une balise de type <a>
     return false;
   });
+
   /////////////////////////////MEMBRES :
   //Ajax Rechercher un membre :
   $(document).ready(function(){

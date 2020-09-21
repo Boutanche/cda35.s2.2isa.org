@@ -46,6 +46,7 @@
                 </div>
                 <p class="p_log"><?php echo $message_log;?></p>
                 <p class="p_log">Si vous n'êtes pas membre MCMP :</p>
+                <!-- TODO : href null & SEO non-explicit value-->
                 <p class="p_log">vous inscrire en Prospect <a class="lien" href="#">: ICI :</a></p>
                 <button class="btn" id="btn_log">Se connecter</button>
             </fieldset>

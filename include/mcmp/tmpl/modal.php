@@ -17,21 +17,26 @@
                     </div>
                 </div>
                 <!--End Section Tittle  -->
-                <form id="modify_news" action="#">
+                <form id="modify_news" action="page-info-<?php echo $thisNews['IdArticle'];?>" method="post">
+                    <input type="hidden" name="formulaire" value="mod_article"/>
+                    <input type="hidden" name="IdArticle" value="<?php echo $thisNews['IdArticle'];?>">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-box user-icon mb-30">
-                                <input type="text" name="md_title" placeholder="Modifier le Titre">
+                                <label for="md_title" class="label_log">Modifier le titre</label>
+                                <input type="text" name="md_title" placeholder="<?php echo $thisNews['Titre']?>" value="<?php echo $thisNews['Titre']?>">
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-box user-icon mb-30">
-                                <input type="text" name="md_description" placeholder="Modifier la description">
+                                <label for="md_description" class="label_log">Modifier la description</label>
+                                <input type="text" name="md_description" placeholder="<?php echo $thisNews['Description']?>" value="<?php echo $thisNews['Description']?>">
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-box user-icon mb-30">
-                                <textarea name="md_detail" placeholder="Modifier le texte"></textarea>
+                                <label for="md_detail" class="label_log">Modifier le texte</label>
+                                <textarea name="md_detail" placeholder="<?php echo $thisNews['Detail']?>"><?php echo $thisNews['Detail']?></textarea>
                             </div>
                         </div>
                         <!-- TODO : BUG affichage de la modale "OK" ne fonctionne pas-->
@@ -39,14 +44,14 @@
                         <div class="row" id="md_article">
                             <div class="col-8">
                                 <div class="submit-info">
-                                    <button class="btn">
-                                        <a href="" class="primary-btn signup-btn">Modif News</a>
+                                    <button class="btn" type="submit">
+                                        Modif News
                                     </button>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="boutons">
-                                    <button id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</button>
+                                    <a id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</a>
                                 </div>
                             </div>
                         </div>
@@ -65,23 +70,3 @@
         console.log('Fermeture. ', this.returnValue);
     });
 </script>
-<!--
-<div id="my-modalito" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Information</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><?php //echo $message_modal; ?></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="primary-btn membership-btn" data-dismiss="modal">Fermer</button>
-            </div>
-        </div>
-    </div>
-</div>
--->

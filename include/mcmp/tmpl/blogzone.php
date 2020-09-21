@@ -11,8 +11,6 @@
             </div>
         </div>
         <div class="row">
-
-
             <?php include './include/mcmp/lib/request/all_news.php'?>
             <?php foreach ($ar_News as $key => $tb_news) {
             if ($tb_news['Code'] == 1) {?>
@@ -39,27 +37,3 @@
         </div>
     </div>
 </section>
-<!--
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="home-blog-single mb-30">
-                    <div class="blog-img-cap">
-                        <div class="blog-img">
-                            <img src="./img/galerie/blog2.png" alt="Jax et Tara"> -->
-                            <!-- Blog date -->
-<!--
-                            <div class="blog-date text-center">
-                                <span>12</span>
-                                <p>Mai</p>
-                            </div>
-                        </div>
-                        <div class="blog-cap">
-                            <span>Mariage</span>
-                            <h3><a href="blog_details.html">Jax et Tara ont l'honneur de vous annoncer leur mariage</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->

@@ -1,5 +1,5 @@
 <?php
-$ThisNewsJson = array();
+//$ThisNewsJson = array();
 $post_News = $bdd->query('SELECT * FROM mcmp_article');
 $ar_News = array();
 while ($data = $post_News->fetch()) {

@@ -5,9 +5,8 @@ if(!empty($_POST)) {
             include './include/mcmp/lib/post/mcmp_formMember.php';
         } elseif ($_POST['formulaire'] == 'login_mcmp') {
             include './include/mcmp/lib/post/mcmp_login.php';
-        }
-        elseif (isset($_POST['formulaire'])&& $_POST['formulaire'] == 'form_contact'){
-
+        } elseif ($_POST['formulaire'] == 'mod_article'){
+            include './include/mcmp/lib/post/md-news.php';
         }
     }
     elseif (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
