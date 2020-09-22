@@ -1,6 +1,6 @@
 <ul id = "navigation" class="main-menu">
     <?php
-    include('./include/mcmp/lib/session_destroy.php');
+    include('./include/mcmp/lib/request/session_destroy.php');
     foreach ($ar_page as $key => $tb_page){
         if ($tb_page['KeyFile'] == $ar_page) {
             $active ='active';

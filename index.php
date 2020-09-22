@@ -64,8 +64,6 @@ session_start();
     //DANGER MAINTENABILITE DU SITE :
     include('./include/mcmp/lib/post/index.php');
     include('./include/mcmp/lib/get/index.php');
-    //Gestion Sécurité By Pass :
-    include ('./include/mcmp/module/secu_bypass.php');
     //TODO : Revoir le découpage. Supprimer les parties innutiles.
     //*****************************************************************
     //INCLUDE DU FRONT GESTION DE L'AFFICHAGE POUR L'UTILISATEUR :

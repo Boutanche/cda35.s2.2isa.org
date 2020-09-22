@@ -4,6 +4,10 @@ RewriteEngine ON
 Options All -Indexes
 #mon fichier statique erreur 404
 #TODO une page 403 pour l'attaque : directory traversal
+#Pour finir sur le directory traversal :
+#Créer un .htaccss dans les repertoires :
+#deny from all.
+#voir : https://assistance.groupemagiconline.com/knowledge-base/fichier-htaccess/
 ErrorDocument 404 /page-404
 ErrorDocument 403 /page-404
 #exemple avec une reecriture de type statique
@@ -12,5 +16,4 @@ ErrorDocument 403 /page-404
 #exemple avec une reecriture de type dynamique
 RewriteRule	^page-([a-z0-9]*)$ index.php?page=$1 [L]
 #RewriteRule ^admin include/mcmp/mcmp_admin/admin.php [L]
-#je m'en sert pas de ça encore...
 RewriteRule	^page-([a-z]*)-([0-9]*)$ index.php?page=$1&id=$2 [L]
