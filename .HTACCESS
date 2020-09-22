@@ -1,13 +1,14 @@
 #j'active le mode reecriture URL
 RewriteEngine ON
-
+#Empécher la lecture des contenus d'un repertoire
+Options All -Indexes
 #mon fichier statique erreur 404
+#TODO une page 403 pour l'attaque : directory traversal
 ErrorDocument 404 /page-404
-
+ErrorDocument 403 /page-404
 #exemple avec une reecriture de type statique
 #RewriteRule ^informations index.php?page=informations [L]
 #RewriteRule ^contact index.php?page=contact [L]
-
 #exemple avec une reecriture de type dynamique
 RewriteRule	^page-([a-z0-9]*)$ index.php?page=$1 [L]
 #RewriteRule ^admin include/mcmp/mcmp_admin/admin.php [L]

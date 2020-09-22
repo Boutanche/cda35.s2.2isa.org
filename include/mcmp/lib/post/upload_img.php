@@ -2,7 +2,6 @@
 if (0 == $_FILES['news_img']['error']){
     //varialbles de configuration :
     echo ('coucou');
-    var_dump($_SESSION);
     $limitSize = 2097152;//votre limitte d'acception de la taille du fichier
     $validExtention = array('png', 'jpeg', 'jpg', 'gif');
     $fileSize = $_FILES['news_img']['size'];
@@ -37,5 +36,4 @@ if (0 == $_FILES['news_img']['error']){
     }
 }else{
     //Il n'y a pas de fichier là dedans :
-    var_dump($_FILES['news_img']);
 }
