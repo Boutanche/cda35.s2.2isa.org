@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="fr_FR">
 <head>
-    <!-- Bug d'affichage Sans doute obsolète :-->
-    <!-- TODO : Tester et retire si ne sert à rien -->
     <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
     <title><?php echo $title; ?></title>
     <!-- Meta -->
@@ -28,8 +26,7 @@
     <link rel="stylesheet" href="./assets/css/nice-select.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./font/flaticon.css">
-    <!-- WYSIWYG Non implémenté encore -->
-    <!-- TODO : Intégration :  -->
+    <!-- WYSIWYG Non implémenté On avait le choix de ne pas le faire si on implémentait d'autres modules -->
     <!--
     <link rel="stylesheet" href="./vendor/Trumbowyg-master/dist/ui/trumbowyg.min.css">
     <link rel="stylesheet" href="./vendor/summernote-0.8.18-dist/summernote.min.css" type="text/css">
@@ -38,13 +35,15 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
     <!-- CSS Perso here -->
     <link rel="stylesheet" href="./assets/css/main.css?v=1.<?php echo time();?>">
+    <!-- URL Canonique -->
+    <link rel="canonical" href="http://cda35.s2.2isa.org/page-<?php echo $page; echo $id = (empty($_GET['id'])) ? '' : "-".$_GET['id'] ?>">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <!-- TEST SMTP CHIMP-->
+    <!-- TEST CHIMP : News LETTER -->
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/bd30a74f0be2497c8b6a8ff3c/cdab8e928b8138274d10003aa.js");</script>
+    <!-- END TEST SMTP -->
     <!-- Matomo Ajouté le 15/09/2020-->
     <script type="text/javascript">
         var _paq = window._paq = window._paq || [];

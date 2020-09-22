@@ -1,11 +1,11 @@
 
 <section class="wantToWork-area w-padding">
     <div class="container">
-        <div class="col-xl-6 col-lg-6 col-md-6">
+        <div class="col-12">
             <div class="section-tittle text-center mb-100">
                     <a id="link_modify:" onclick="$dialog.show()" class="btn wantToWork-btn f-right">Add Photo</a>
                 <dialog id="photo_dialog">
-                    <div class="col-12">
+                    <div class="col-10">
                         <!--Section Tittle  -->
                         <div class="form-tittle">
                             <div class="row ">
@@ -43,30 +43,29 @@
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-success">Poster une Photo</button>
                                 </div>
-                            </div>
-                        </form>
-                        <!-- END : Formulaire : Poster une Photo sous un article -->
-                                    <div class="col-2">
-                                        <div class="boutons">
-                                            <button id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</button>
-                                        </div>
+                                <div class="col-2">
+                                    <div class="boutons">
+                                        <a id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</a>
                                     </div>
                                 </div>
                             </div>
                         </form>
+                        <!-- END : Formulaire : Poster une Photo sous un article -->
+                        </div>
                     </div>
-                </dialog>
+                </form>
             </div>
-        </div>
-        <script>
-            //TODO ? DEPLACE ça :
-            var $dialog = document.getElementById('photo_dialog');
-            if(!('show' in $dialog)){
-                document.getElementById('promptCompat').className = 'no_dialog';
-            }
-            $dialog.addEventListener('close', function() {
-                console.log('Fermeture. ', this.returnValue);
-            });
-        </script>
+        </dialog>
     </div>
+</div>
+<script>
+    //TODO ? DEPLACE ça :
+    var $dialog = document.getElementById('photo_dialog');
+    if(!('show' in $dialog)){
+        document.getElementById('promptCompat').className = 'no_dialog';
+    }
+    $dialog.addEventListener('close', function() {
+        console.log('Fermeture. ', this.returnValue);
+    });
+</script>
 </section>
