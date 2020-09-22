@@ -1,6 +1,8 @@
 <?php
 if(!empty($_POST)) {
     if (isset($_POST['formulaire'])) {
+        //Gestion Sécurité By Pass :
+        include('./include/mcmp/module/secu_bypass.php');
         if ($_POST['formulaire'] == 'add_member') {
             include './include/mcmp/lib/post/mcmp_formMember.php';
         } elseif ($_POST['formulaire'] == 'login_mcmp') {
@@ -12,4 +14,6 @@ if(!empty($_POST)) {
     elseif (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
         include './include/mcmp/lib/post/upload_img.php';
     }
+
+
 }

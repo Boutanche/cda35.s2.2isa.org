@@ -1,8 +1,32 @@
 <?php
 session_start();
-    //Lancement de la prise en compte des sessions.
-    //*************************************************************
-    //*************************************************************
+//*************************************************************
+//*************************************************************
+//********//CODE DE LA PAGE INDEX.PHP RACINE DU SITE//*********
+//*************************************************************
+//*************************************************************
+//insertion de la base de données hébergée sous OVH.
+include('./config/config.php');
+    if ($connect == true) {
+        //**************************************//
+        //Cookie Ticket pour sécurité le ByPass :
+        //**************************************//
+        $cookie_name = "ticket";
+        // On génère quelque chose d'aléatoire
+        $ticket = session_id().microtime().rand(0,999);
+        // on hash pour avoir quelque chose de propre qui aura toujours la même forme
+        $ticket = hash('sha512', $ticket);
+        // On enregistre des deux cotés
+        setcookie($cookie_name, $ticket, time() + (60 * 20)); // Expire au bout de 20 min
+        $_SESSION['ticket'] = $ticket;
+        //************************************//
+        //Fin de gestion du Cookie sécurité :
+        //************************************//
+        //$time = time(); // get current timestamp
+        //$token = sha1($time); // create the token
+        //$_SESSION['token'] = $token; // store the token in session var
+        //$_SESSION['tokenTime'] = $time; // store the time of token generation in session var
+    }
     /**
      * Projet Fil Rouge : Moto Club Millau Passion :
      * Le but de ce projet et de démontrer mes compétence et ma compréhension des enjeux du développement web.
@@ -37,14 +61,9 @@ session_start();
              * Et je rappelle session_start.
              * Cela fonctionne mais je ne comprends pas pouquoi, alors que je passe par index.php (root)
              * Pourquoi il faut le rappeller sur ces fichiers.
+             * J'ai enlevé pour tester... ça fonctionne quand même...
             */
-    //*************************************************************
-    //*************************************************************
-    //********//CODE DE LA PAGE INDEX.PHP RACINE DU SITE//*********
-    //*************************************************************
-    //*************************************************************
-    //insertion de la base de données hébergée sous OVH.
-    include('./config/config.php');
+
     //mes librairies PHP :
     //TODO : Effectuer un découpage plus pertient.
     //En fait non !!! J'ai essayé et fais des tests de MVC.

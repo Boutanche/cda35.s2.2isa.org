@@ -83,20 +83,7 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
                 $_SESSION['user_level'] = $user_level;
                 $message_log = "Bravo " . $prenom . " " . $nom . " vous êtes connecté ";
                 $page = $homepage;
-                //**************************************//
-                //Cookie Ticket pour sécurité le ByPass :
-                //**************************************//
-                $cookie_name = "ticket";
-                // On génère quelque chose d'aléatoire
-                $ticket = session_id() . microtime() . rand(0, 9999999999);
-                // on hash pour avoir quelque chose de propre qui aura toujours la même forme
-                $ticket = hash('sha512', $ticket);
-                // On enregistre des deux cotés
-                setcookie($cookie_name, $ticket, time() + (60 * 20)); // Expire au bout de 20 min
-                $_SESSION['ticket'] = $ticket;
-                //************************************//
-                //Fin de gestion du Cookie sécurité :
-                //************************************//
+                $connect = true;
             }
             else{
                 $message_log ="Mauvais mot de passe";

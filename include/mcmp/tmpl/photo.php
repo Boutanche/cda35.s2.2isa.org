@@ -73,13 +73,18 @@
         </div>
     </div>
 <!-- Test Galery Dynamique :-->
+    <!-- Appel d'un la requête sur les images de la galerie -->
+    <?php include './include/mcmp/lib/request/all_photo_galerie.php'?>
+    <?php foreach ($ar_Galerie as $key => $tb_Galerie) {?>
+        <!-- TODO : FINIR le foreach des photos : -->
+        <!-- TODO : Gérer les extensions .img : -->
     <div class="row">
         <div class="col-10">
             <div class="container-fluid p-0 fix">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="box snake mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(img/galerie/gallery1.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(<?php echo $tb_Galerie['Adresse'].$tb_Galerie['Titre'].'.jpg';?>);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
@@ -146,6 +151,8 @@
         </div>
         <!-- End Galery Dynamique :-->
     </div>
+    <?php }
+    ?>
     <div class="row">
         <div class="col-10">
             <div class="container-fluid p-0 fix">

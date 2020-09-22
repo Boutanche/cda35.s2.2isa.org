@@ -24,6 +24,7 @@
 <div id="login_mod">
     <div class="col-12 modal-content" id="myModal">
         <form class="hero-form" action="./index.php" method="post">
+
             <p><span class="close">&times;</span></p>
             <fieldset id="field_log">
                 <legend id="form_log">Formulaire de connexion</legend>

@@ -211,8 +211,9 @@
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////// Mon JS : /////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  /////////////////////////////LOGIN :
+  //************ ************//
+  //********* LOGIN : *******//
+  //*************************//
   //Gestion Modal Log :
   $('.myBtn').on("click", function () {
     $('#myModal').show();
@@ -221,8 +222,9 @@
     $('#myModal').hide();
     $('#modifNews_close').hide();
   });
-
-  /////////////////////////////MAIL :
+  //**************** ***************//
+  //************ MAIL : ************//
+  //********************************//
   //Envoyer un e-mail :
   $('#sendmail .btn').on('click', function(){
     console.log('btn sendmail ready !');
@@ -239,23 +241,19 @@
     });
     //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
     request.done(function( msg ) {
-      //console.log(msg);
-      //$('#maTraceModalito').html("Message envoyé.")
       //Affichage de la modal avec :
       $('#maTraceModalito').html(msg.modal);
-      //$("#my-modalito").show();
-      //$( "#log" ).html( msg );
     });
     //erreur 404 ou 500 - le serveur ne repond pas, erreur PHP ?
     request.fail(function( jqXHR, textStatus ) {
       console.log( "Request failed: " + textStatus );
     });
-    //stopper le comportement normal d'une balise de type <a>
     return false;
   });
-
-  /////////////////////////////MEMBRES :
-  //Ajax Rechercher un membre :
+  //*********************************//
+  //*********** MEMBRES : ***********//
+  //** Ajax Rechercher un membre : **//
+  //*********************************//
   $(document).ready(function(){
     //Tester saisie dans champ de recherche :
     $('#recherche').keyup(function () {
@@ -266,6 +264,8 @@
           type : 'POST',
           url: './include/mcmp/lib/ajax_search.php',
           data : 'recherche='+$(this).val(),
+          //Déprécié : Mais fonctionne :
+          //On lui préfère request.done()
           success : function (data) {
             $('#result_recherche').html(data);
           }
@@ -273,5 +273,5 @@
       }
     });
   });
-
+  //**********************************//
 })(jQuery);
