@@ -1,5 +1,5 @@
 <?php
-//TODO : Bug : Depuis ajout By Pass déconnexion quand on modifie la news :
+//TODO : Bug : Depuis ajout "By Pass" déconnexion quand on modifie la news :
 //Traitement sur la news :
 //Initialisation des variables :
 $today = date("Y:m:d");
@@ -33,31 +33,30 @@ $req_modify_article->bindParam(':idfichier', $idfichier);
 //Exécuter Requête
 $req_modify_article->execute();
 //Traitement Image
+//TODO : Ne fonctionne pas !! C'est ctrl-C de ce qui fonctionne sur Galeie...
 if (0 == $_FILES['news_img_article']['error']){
     //varialbles de configuration :
-    echo ('coucou');
     $limitSize = 2097152;//votre limitte d'acception de la taille du fichier
     $validExtention = array('png', 'jpeg', 'jpg', 'gif');
     $fileSize = $_FILES['news_img_article']['size'];
     $today = date("Y:m:d");
     //déplacer le fichier
-    $upload_news_img = '/img/upload/news/';
+    $upload_news_img = 'img/upload/news/';
     $img_info = new SplFileInfo($_FILES['news_img_article']['name']);
     $extension = $img_info->getExtension();
     $new_img = $_POST['name_img_article'].'.'.$extension;
-    //TODO : Récupérer $extension dans la bdd
     if (in_array($extension, $validExtention)) {
         if ($limitSize > $fileSize) {
-            move_uploaded_file($_FILES['news_img_article']['tmp_name'], $upload_news_img.$new_img);
-            //TODO : Upload OK
+            move_uploaded_file($_FILES['news_img_article']['tmp_name'], './'.$upload_news_img.$new_img);
             $req_insertimg_news = $bdd->prepare(
-                'INSERT INTO mcmp_photo (Titre, DPhoto, Adresse, IdAdh) 
-                          VALUES ( :titre, :dphoto, :adresse, :idadherent)');
+                'INSERT INTO mcmp_photo (Titre, DPhoto, Adresse, IdAdh, Extension) 
+                          VALUES ( :titre, :dphoto, :adresse, :idadherent, :extension)');
             $result = $req_insertimg_news->execute(array(
-                'titre' => $_POST['name_img_article'],
+                'titre' => $_POST['name_img'],
                 'dphoto' => $today,
                 'adresse' => $upload_news_img,
-                'idadherent' => $_SESSION['id_adherent']
+                'idadherent' => $_SESSION['id_adherent'],
+                'extension' => $extension
                 //'idactivite' => 12//,$_POST['news_id']
                 //Je n'ai pas besoin de code pour les photos : le fichier où j'enregistre detérmine le type de photo.
                 //'code' => 1 ));

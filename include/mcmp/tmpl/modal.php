@@ -19,7 +19,8 @@
                     </div>
                 </div>
                 <!--End Section Tittle  -->
-                <form id="modify_news" action="page-info-<?php echo $thisNews['IdArticle'];?>" method="post">
+                <!-- TODO : BUG : Quand je post, il se déconnecte : modification prise en compte pourtant. -->
+                <form id="modify_news" action="page-info" method="post">
                     <input type="hidden" name="formulaire" value="mod_article"/>
                     <input type="hidden" name="IdArticle" value="<?php echo $thisNews['IdArticle'];?>">
                     <div class="row">
@@ -43,54 +44,23 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <div class="col-12">
-                                <!-- Je voulais faire une zone de glissé déposer dans cette partie : -->
-                                <!--
-                                <img src="image.jpg" id="depart" draggable="true"/>
-                                <br/>
-                                <div id="arrivee"></div>
-                                -->
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <div class="form-box mb-30">
-                                                <label>Nom de l'image : </label>
-                                                <input type="text" name="name_img_article" placeholder="Nom du Fichier">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <div  class="form-box mb-30">
-                                                <label>Téléverser une image : </label>
-                                                <input type="file" name="news_img_article" id="this_img" placeholder="Votre image"/>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <!-- TODO : BUG affichage de la modale "OK" ne fonctionne pas-->
+                        <!-- Attention les messages sont bien envoyés ... -->
+                        <div class="row" id="md_article">
+                            <div class="col-8">
+                                <div class="submit-info">
+                                    <button class="btn" type="submit">
+                                        Modif News
+                                    </button>
                                 </div>
                             </div>
-                        </fieldset>
-                            <!-- TODO : BUG affichage de la modale "OK" ne fonctionne pas-->
-                            <!-- Attention les messages sont bien envoyés ... -->
-                            <div class="row" id="md_article">
-                                <div class="col-8">
-                                    <div class="submit-info">
-                                        <button class="btn" type="submit">
-                                            Modif News
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="boutons">
-                                        <a id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</a>
-                                    </div>
+                            <div class="col-2">
+                                <div class="boutons">
+                                    <a id="modif_news" class="btn wantToWork-btn f-left" onclick="$dialog.close()">Fermer</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-
                 </form>
             </div>
         </dialog>
