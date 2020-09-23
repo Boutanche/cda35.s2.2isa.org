@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="box snake mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(<?php echo $tb_Galerie['Adresse'].$tb_Galerie['Titre'].'.jpg';?>);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(<?php echo $tb_Galerie['Adresse'].$tb_Galerie['Titre'].'.'.$tb_Galerie['Extension'];?>);"></div>
                             <div class="overlay">
                                 <div class="overlay-content">
                                     <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
