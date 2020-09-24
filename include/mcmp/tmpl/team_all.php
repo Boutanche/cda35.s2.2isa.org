@@ -5,7 +5,7 @@
                 <div class="col-lg-6 col-md-9 col-sm-9">
                     <div class="section-tittle">
                         <span>Page réservée aux adhérents :</span>
-                        <h2>Les plus excpérimentés à votre service</h2>
+                        <h2>Les plus expérimentés à votre service</h2>
                     </div>
                 </div>
                 <?php
