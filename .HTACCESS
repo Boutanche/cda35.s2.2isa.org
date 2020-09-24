@@ -3,12 +3,16 @@ RewriteEngine ON
 #Empécher la lecture des contenus d'un repertoire
 Options All -Indexes
 #mon fichier statique erreur 404
-#TODO une page 403 pour l'attaque : directory traversal
+#voir : https://assistance.groupemagiconline.com/knowledge-base/fichier-htaccess/
+ErrorDocument 404 /page-404
+#TODO Une page 403 pour l'attaque : directory traversal NO !!!
+#TODO Ne pas faire ça !
+#Suivre les préconisations ANSSI :
+#"dans certains cas, l’utilisation de l’erreur 404 générique plutôt que d’une erreur 401, 403, 405,etc.
+#pour éviter de révéler trop d’informations sur le fonctionnement ou le contenu en accès limitédu site" ;
 #Pour finir sur le directory traversal :
 #Créer un .htaccss dans les repertoires :
 #deny from all.
-#voir : https://assistance.groupemagiconline.com/knowledge-base/fichier-htaccess/
-ErrorDocument 404 /page-404
 ErrorDocument 403 /page-404
 #exemple avec une reecriture de type statique
 #RewriteRule ^informations index.php?page=informations [L]
