@@ -18,7 +18,7 @@ if (0 == $_FILES['news_img']['error']){
                 'INSERT INTO mcmp_photo (Titre, DPhoto, Adresse, IdAdh, Extension) 
                           VALUES ( :titre, :dphoto, :adresse, :idadherent, :extension)');
             $result = $req_insertimg_news->execute(array(
-                'titre' => $_POST['name_img'],
+                'titre' => $_POST['name_img'],//TODO : add fonction time() Pour sécurité.
                 'dphoto' => $today,
                 'adresse' => $upload_news_img,
                 'idadherent' => $_SESSION['id_adherent'],
