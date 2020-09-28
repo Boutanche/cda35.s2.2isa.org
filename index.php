@@ -7,6 +7,10 @@ session_start();
 //*************************************************************
 //insertion de la base de données hébergée sous OVH.
 include('./config/config.php');
+    //TODO Bug FIX TEST DE NON REGRESSION//
+    //TODO : Depuis la mise en place du By pass, Obligation de reconnexion après modification d'une news.
+    //Benoit par en vacances pensez à vous en occupper !
+    //Demander à Sébastien Lambin, visiblement il a trouvé le truc.
     if ($connect == true) {
         //**************************************//
         //Cookie Ticket pour sécurité le ByPass :

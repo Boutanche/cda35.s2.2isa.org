@@ -5,15 +5,15 @@ Options All -Indexes
 #mon fichier statique erreur 404
 #voir : https://assistance.groupemagiconline.com/knowledge-base/fichier-htaccess/
 ErrorDocument 404 /page-404
-<<<<<<< HEAD
+
 #TODO Une page 403 pour l'attaque : directory traversal NO !!!
 #TODO Ne pas faire ça !
 #Suivre les préconisations ANSSI :
 #"dans certains cas, l’utilisation de l’erreur 404 générique plutôt que d’une erreur 401, 403, 405,etc.
 #pour éviter de révéler trop d’informations sur le fonctionnement ou le contenu en accès limitédu site" ;
-=======
+
 #TODO une page 403 pour l'attaque : directory traversal
->>>>>>> 5460c3f784ce9b4fb161b2cc38d93855530ba3fb
+
 #Pour finir sur le directory traversal :
 #Créer un .htaccss dans les repertoires :
 #deny from all.
