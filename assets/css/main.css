@@ -168,68 +168,64 @@ a:not([href]) {
 /* line 74, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .page-top {
   color: #c6c8ca;
+  padding-top: 20%;
+  background-color: black;
 }
 
-/* line 77, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 79, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-logo {
   padding: 20px;
 }
 
-/* line 80, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 82, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .header-section {
   padding-left: 0px;
 }
 
-/* line 83, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 85, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .close {
   color: white;
 }
 
-/* line 86, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 88, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .close:hover {
   color: #c6c8ca;
 }
 
-/* line 89, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 91, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #form_log {
   font-size: 20px;
 }
 
-/* line 92, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 94, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .row_login {
   padding-top: 1%;
 }
 
-/* line 95, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 97, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .p_log {
   font-size: 10px;
   color: whitesmoke;
   margin-bottom: 0px;
 }
 
-/* line 100, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 102, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .badge-danger {
   margin-bottom: 2%;
 }
 
-/* line 103, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 105, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 #field_log {
   padding-bottom: 2%;
 }
 
-/* line 106, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
-.page-top {
-  padding-top: 5%;
-  background-color: black;
-}
-
-/* line 110, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 108, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-breadcrumb {
   background-color: #4e555b;
   font-size: 15px;
 }
 
-/* line 113, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
+/* line 111, ../../wamp/www/cda35.s2.2isa.org/assets/css/sass/_header.scss */
 .site-breadcrumb span {
   color: #c82333;
 }

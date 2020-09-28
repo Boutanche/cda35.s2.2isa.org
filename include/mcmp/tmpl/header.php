@@ -14,15 +14,19 @@
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <?php include ('./include/mcmp/module/navDynamique.php');?>
+                                <?php include ('./include/mcmp/module/module_log.php');?>
                             </div>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
+
                     </div>
+                    <?php include ('./include/mcmp/module/module_log.php');?>
                 </div>
             </div>
         </div>
     </div>
+
 </header>
