@@ -37,14 +37,14 @@ class Activite
             }
         }
     }
-    //TODO : Une List de Getters
+    //Une List de Getters
     public function getIdAct()
     {
         return $this->_idAct;
     }
     public function getTitre()
     {
-        return $this->_tire;
+        return $this->_titre;
     }
     public function getDDebut()
     {
@@ -54,5 +54,41 @@ class Activite
     {
         return $this->_dFin;
     }
+    public function getDescription()
+    {
+        return $this->_description;
+    }
+    public function getDetail()
+    {
+        return $this->_detail;
+    }
+    public function getTarifAdh()
+    {
+        return $this->_tarifAdh;
+    }
+    public function getTarifInv()
+    {
+        return $this->_tarifInv;
+    }
+    public function getDLimite()
+    {
+        return $this->_dLimite;
+    }
+    public function getIdAdh()
+    {
+        return $this->_idAdh;
+    }
+    public function getIdType()
+    {
+        return $this->_idType;
+    }
     //TODO : Une List de Setter
+    public function setId($id): void
+    {
+        $this->_idAct= $id;
+    }
+    public function setTitre($titre): void
+    {
+        $this->_titre= $titre;
+    }
 }

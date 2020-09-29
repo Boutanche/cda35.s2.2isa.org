@@ -38,7 +38,7 @@ class Adherent
             }
         }
     }
-    //TODO : Une List de Getters
+    //Une List de Getters
     public function getIdAdherent()
     {
         return $this->_idAdherent;
@@ -95,7 +95,7 @@ class Adherent
     {
         return $this->_idRole;
     }
-    //TODO : Une List de Setters
+    //Une List de Setters
     public function setId($id): void
     {
         $this->_idAdherent= $id;
