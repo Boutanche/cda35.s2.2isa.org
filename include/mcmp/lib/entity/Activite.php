@@ -3,6 +3,9 @@
 
 class Activite
 {
+    /**
+     * @var integer Identifiant unique
+     */
     private $_idAct;
     private $_titre ;
     private $_dDebut;
@@ -19,7 +22,8 @@ class Activite
     {
         $this->hydrate($data);
     }
-    public function hydrate(Array $data)
+
+    private function hydrate(Array $data)
     {
         foreach ($data as $key => $value){
             $methode = 'set'.ucfirst($key);
@@ -28,6 +32,7 @@ class Activite
             }
         }
     }
+
     public function dehydrate(Activite $activite)
     {
         foreach ($activite as $key => $value){
@@ -37,6 +42,7 @@ class Activite
             }
         }
     }
+
     //Une List de Getters
     public function getIdAct()
     {

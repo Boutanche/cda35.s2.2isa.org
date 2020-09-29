@@ -1,0 +1,26 @@
+<?php
+$bdd = new PDO('mysql:host=cda35.2isa.org;dbname=cda35_bd1;charset=utf8', 'cda35', '9556cda35',
+//Gestion d'une erreur UTF-8 avec la BDD.
+array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+
+//TODO : Gestion des Erreurs --dev A retirer en --prod :
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//Variables de configuration :
+$messageAdmin_FormMember = "Formulaire non-envoyé";
+$homepage = 'home';
+$page = $homepage;
+$user_level = 0;
+$message_log = "Vous n'êtes pas connecté";
+$idConnected = 0;
+$connect = false;
+if(isset($_SESSION['user_level'])){
+    $user_level = $_SESSION['user_level'];
+    $message_log = $_SESSION['prenom'] ." vous êtes connecté !";
+    $idConnected = $_SESSION['id_adherent'];
+}
+
+//'mysql:host=localhost:3308;dbname=cda03-bd1-benoit;charset=utf8', 'root', '');
+//Non montré : Test : 1 an de formation, on a toujours pas eu de cours sur la gestion des erreurs
+//if ($bddovh->connect_error) die("Erreur fatale");
+
