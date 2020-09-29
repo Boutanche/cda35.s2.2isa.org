@@ -83,12 +83,48 @@ class Activite
         return $this->_idType;
     }
     //TODO : Une List de Setter
-    public function setId($id): void
+    public function setIdAct($id): void
     {
         $this->_idAct= $id;
     }
     public function setTitre($titre): void
     {
         $this->_titre= $titre;
+    }
+    public function setDDebut($dDebut) : void
+    {
+        $this->_dDebut= $dDebut;
+    }
+    public function setDFin($dFin): void
+    {
+        $this->_dFin = $dFin;
+    }
+    public function setDescription($description): void
+    {
+        $this->_description = $description;
+    }
+    public function setDetail($detail): void
+    {
+        $this->_detail = $detail;
+    }
+    public function setTarifAdh($tarifAdh): void
+    {
+        $this->_tarifAdh = $tarifAdh;
+    }
+    public function setTarifInv($tarifInv): void
+    {
+        $this->_tarifInv = $tarifInv;
+    }
+    public function setDLimite($dLimite): void
+    {
+        $this->_dLimite = $dLimite;
+    }
+    public function setIdAdh($idAdh): void
+    {
+        $this->_idAdh = $idAdh;
+    }
+    public function setIdType($idType): void
+    {
+        $this->_idType = $idType;
     }
 }

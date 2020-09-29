@@ -27,7 +27,10 @@ class ActiviteDAO
         $req_InsertAct->bindValue(':dLimite', $activite->getDLimite());
         $req_InsertAct->bindValue(':idAdh', $activite->getIdAdh());
         $req_InsertAct->bindValue(':idtype', $activite->getIdType());
-
-
+        //Execution de l'insert :
+        $req_InsertAct->execute();
+    }
+    public function setBdd(PDO $bdd){
+        $this->_bdd = $bdd;
     }
 }
