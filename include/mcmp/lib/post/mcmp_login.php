@@ -19,14 +19,14 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
                  * BUG : RECUPERATION ID ADHERENT :
                  * ------------------------------------------
                  * ------------------------------------------
-                        //TODO : Régler le pbm : $ThisIdAdherent = Null :
-                        //TODO : PBM : AdherentDAO.php et constructeur de Adherent.php
-                        //TODO !
+                        // Régler le pbm : $ThisIdAdherent = Null :
+                        //PBM : AdherentDAO.php et constructeur de Adherent.php
                             /*
                             echo $prenom;
                             echo $thisAdherent->getIdAdherent();
                             $idConnected = $thisAdherent->getIdAdherent();
                             */
+                //$thisAdherent = new Adherent($daoAdherent->findByLogin($strReplaceLog));
                 /*-------------------------------------------
                  * ------------------------------------------
                  * BUG NON RESOLU :

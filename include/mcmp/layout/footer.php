@@ -86,12 +86,12 @@
                                 <div class="footer-copy-right text-center">
                                     <!-- Link back to Colorlib can not be removed. Template is licensed under CC BY 3.0. -->
                                     <p>
-                                        Template Bootstrap : Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        Template Bootstrap : Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" rel="noreferrer" target="_blank">Colorlib</a>
                                     </p>
                                 </div>
                                 <div class="footer-copy-right text-center">
                                     <p>
-                                        Conception et Développement :Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This web-site is made with <i class="fa fa-anchor" aria-hidden="true"></i> by <a href="https://bbinformatique.fr" target="_blank">BiBi Informatique // Benoit CDA03</a>
+                                        Conception et Développement :Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This web-site is made with <i class="fa fa-anchor" aria-hidden="true"></i> by <a href="https://bbinformatique.fr" rel="noreferrer" target="_blank">BiBi Informatique // Benoit CDA03</a>
                                     </p>
                                 </div>
                                 <div class="footer-copy-right text-center">
@@ -166,7 +166,9 @@
         -->
 
         <!-- Mon Js Perso update template-->
-        <script src="./assets/js/main.js?v=1.<?php echo time(); ?>"></script>
-
+        <script src="./assets/js/main.js?v=1.0"></script>
+        <!-- Souvenirs :
+        <?php //echo time(); ?>
+        -->
     </body>
 </html>

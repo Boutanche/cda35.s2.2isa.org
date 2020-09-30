@@ -23,7 +23,7 @@
                         <div class="mobile_menu d-block d-lg-none"></div>
 
                     </div>
-                    <?php include ('./include/mcmp/module/module_log.php');?>
+                    <?php //include ('./include/mcmp/module/module_log.php');?>
                 </div>
             </div>
         </div>

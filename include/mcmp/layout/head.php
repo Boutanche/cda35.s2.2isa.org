@@ -34,7 +34,7 @@
     <!-- Open Street Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
     <!-- CSS Perso here -->
-    <link rel="stylesheet" href="./assets/css/main.css?v=1.<?php echo time();?>">
+    <link rel="stylesheet" href="./assets/css/main.css?v=1.0">
     <!-- URL Canonique -->
     <link rel="canonical" href="http://cda35.s2.2isa.org/page-<?php echo $page; echo $id = (empty($_GET['id'])) ? '' : "-".$_GET['id'] ?>">
     <!--[if lt IE 9]>
