@@ -26,7 +26,11 @@
                             </div>
                             <div class="blog-cap">
                                 <span><?php echo $tb_news['Titre'] ?></span>
-                                <h3><a href="page-info-<?php echo $tb_news['IdArticle'];?>" data-id='<?php echo $tb_news['IdArticle'];?>'> <?php echo $tb_news['Description'] ?></a></h3>
+                                <h3>
+                                    <a href="page-info-<?php echo $tb_news['IdArticle'];?>" data-id='<?php echo $tb_news['IdArticle'];?>'>
+                                        <?php echo $tb_news['Description'] ?>
+                                    </a>
+                                </h3>
                             </div>
                         </div>
                     </div>

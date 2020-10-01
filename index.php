@@ -101,7 +101,7 @@ include('./config/config.php');
     include('./include/mcmp/tmpl/header.php');
     //*****************************************************************
     //ARBORESCENCE :
-    //TODO : Netoyer : Enlever les fichiers innutiles :
+    //TODO : Nettoyer : Enlever les fichiers innutiles :
     // -Root :
     // -Assets :
     //      -- css (mon css -- sass)
