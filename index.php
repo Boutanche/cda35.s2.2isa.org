@@ -66,6 +66,7 @@ include('./config/config.php');
              * Cela fonctionne mais je ne comprends pas pouquoi, alors que je passe par index.php (root)
              * Pourquoi il faut le rappeller sur ces fichiers.
              * J'ai enlevé pour tester... ça fonctionne quand même...
+             * Pas compris... Est ce que c'est une piste pour le soucis By Pass ?
             */
 
     //mes librairies PHP :
@@ -106,6 +107,9 @@ include('./config/config.php');
     //      -- css (mon css -- sass)
     //      -- js (mon js)
     // -img (mes images)
+    //      -- upload :
+    //          -- galerie (Images ajoutées depuis "Galerie")
+    //          -- news (Images ajoutée depuis News)
     // -include :
     //      -- mcmp
     //          -- layout (Footer et Header)
@@ -114,7 +118,7 @@ include('./config/config.php');
     //              -- manager (connexion bdd : dao)
     //              -- get : index.methodes get
     //              -- post : index.methodes post
-    //              -- resquest
+    //              -- resquest : récupération des données.
     //          -- mcmp_admin (accès administration)
     //          -- mcmp-page (page.php)
     //          -- module (php dynamique)

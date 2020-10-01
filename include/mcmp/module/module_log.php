@@ -11,7 +11,7 @@
                 <input type="hidden" name="formulaire" value="login_mcmp"/>
                 <div class="row_login">
                     <div class="col-6">
-                        <label for="login" class="label_log">Votre Pseudo :</label>
+                        <label for="login" class="label_log">Votre Pseudo :(Doc)</label>
                     </div>
                     <div class="col-6">
                         <input type="text" id="login" name="login_Log" placeholder="Login" required autofocus>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="row_login">
                     <div class="col-6">
-                        <label for="password" class="label_log">Votre mot de passe :</label>
+                        <label for="password" class="label_log">Votre mot de passe :(Doc01)</label>
                     </div>
                     <div class="col-6">
                         <input type="password" id="password" name="password_Log" placeholder="Password" required>

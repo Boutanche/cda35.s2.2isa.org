@@ -11,7 +11,7 @@
                 <div class="about-caption">
                     <!-- Section Tittle -->
                     <div class="section-tittle section-tittle3 mb-35">
-                        <h1>Fraternité</h1>
+                        <h2>Fraternité</h2>
                         <span>A Propos du Club</span>
                         <h2>Plus qu'un club, une fraternité</h2>
                     </div>

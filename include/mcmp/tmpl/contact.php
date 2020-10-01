@@ -37,7 +37,7 @@
                                 <div class="col-lg-6 col-md-6">
                                     <div class="submit-info">
                                         <button class="btn">
-                                        <a href="" class="primary-btn signup-btn">Message</a>
+                                            <div class="primary-btn signup-btn">Message</div>
                                         </button>
                                         <div id="maTraceModalito">Attention : Ajax ici !"</div>
                                     </div>

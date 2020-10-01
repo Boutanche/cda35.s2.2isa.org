@@ -1,4 +1,4 @@
-<section class="services-area pt-100 pb-150 section-bg" data-background="./img/galerie/section_bg01.png">
+<div class="services-area pt-100 pb-150 section-bg" data-background="./img/galerie/section_bg01.png">
     <!--? Want To work -->
     <section class="wantToWork-area w-padding">
         <div class="container">
@@ -62,4 +62,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

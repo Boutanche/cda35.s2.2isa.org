@@ -1,10 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="fr_FR">
+<html class="no-js" lang="fr">
 <head>
-    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title><?php echo $title; ?></title>
     <!-- Meta -->
-    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="fr-FR">
+
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="<?php echo $metadescription; ?>">
     <meta name="keywords" content="<?php echo $keywords ?>">
@@ -45,7 +46,7 @@
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/bd30a74f0be2497c8b6a8ff3c/cdab8e928b8138274d10003aa.js");</script>
     <!-- END TEST SMTP -->
     <!-- Matomo Ajouté le 15/09/2020-->
-    <script type="text/javascript">
+    <script>
         var _paq = window._paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
