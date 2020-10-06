@@ -1,8 +1,8 @@
 <?php
 if (0 == $_FILES['news_img']['error']){
     //varialbles de configuration :
-    echo ('coucou');
-    $limitSize = 2097152;//votre limitte d'acception de la taille du fichier
+    //echo ('coucou');
+    $limitSize = 2097152;//limitte taille du fichier
     $validExtention = array('png', 'jpeg', 'jpg', 'gif');
     $fileSize = $_FILES['news_img']['size'];
     $today = date("Y:m:d");
@@ -18,13 +18,16 @@ if (0 == $_FILES['news_img']['error']){
                 'INSERT INTO mcmp_photo (Titre, DPhoto, Adresse, IdAdh, Extension) 
                           VALUES ( :titre, :dphoto, :adresse, :idadherent, :extension)');
             $result = $req_insertimg_news->execute(array(
-                'titre' => $_POST['name_img'],//TODO : add fonction time() Pour sécurité.
+                //TODO : add fonction time() Pour sécurité.
+                'titre' => $_POST['name_img'],
                 'dphoto' => $today,
                 'adresse' => $upload_news_img,
                 'idadherent' => $_SESSION['id_adherent'],
                 'extension' => $extension
-                //'idactivite' => 12//,$_POST['news_id'] TODO : NE PAS CONFONDRE ACTIVITE ET LES NEWS :
-                //Je n'ai pas besoin de code pour les photos : le fichier où j'enregistre detérmine le type de photo.
+                //TODO : NE PAS CONFONDRE ACTIVITE ET LES NEWS :
+                //'idactivite' => 12//,$_POST['news_id']
+                //Je n'ai pas besoin de code pour les photos : le fichier où j'enregistre détermine le type de photo au final
+                //TODO : Modification du MCD
                 //'code' => 1 ));
             ));
             //echo "Résultat de la requête  : ".var_dump($result)."<br>";
