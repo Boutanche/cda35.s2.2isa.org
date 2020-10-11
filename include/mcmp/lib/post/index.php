@@ -14,6 +14,4 @@ if(!empty($_POST)) {
     elseif (!empty($_POST['name_img']) && !empty($_FILES['news_img'])){
         include './include/mcmp/lib/post/upload_img.php';
     }
-
-
 }

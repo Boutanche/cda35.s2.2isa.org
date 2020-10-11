@@ -1,7 +1,6 @@
 <?php
 if (0 == $_FILES['news_img']['error']){
     //varialbles de configuration :
-    //echo ('coucou');
     $limitSize = 2097152;//limitte taille du fichier
     $validExtention = array('png', 'jpeg', 'jpg', 'gif');
     $fileSize = $_FILES['news_img']['size'];

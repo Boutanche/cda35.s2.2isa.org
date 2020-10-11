@@ -225,27 +225,26 @@
   //**************** ***************//
   //************ MAIL : ************//
   //********************************//
-  //Envoyer un e-mail :
+  //Send e-mail :
   $('#sendmail .btn').on('click', function(){
-    console.log('btn sendmail ready !');
-    //$('#maTraceModalito').html("Message envoyé.")
-    var name = $('#contact-form input[name=name]').val();
-    var email = $('#contact-form input[name=email]').val();
-    var message = $('#contact-form textarea').val();
-    //methode Ajax
-    var request = $.ajax({
+    let name = $('#contact-form input[name=name]').val();
+    let email = $('#contact-form input[name=email]').val();
+    let message = $('#contact-form textarea').val();
+    //Ajax :
+    let request = $.ajax({
       url: "./include/mcmp/lib/methode_ajax.php",
       method: "POST",
       data: { sendmail : 1, name:name, email : email, message:message },
-      dataType: "json" //JSON = reponse attendu en array() ou HTML, reponse de type string
+      dataType: "json"
     });
-    //reussite reponse 200 - Inclu le fait que vous avez pas les permissions requisent
+    //OK : response 200
     request.done(function( msg ) {
-      //Affichage de la modal avec :
+      //Print Message in <div>:
       $('#maTraceModalito').html(msg.modal);
     });
-    //erreur 404 ou 500 - le serveur ne repond pas, erreur PHP ?
+    //FALSE : Error 404 or 500
     request.fail(function( jqXHR, textStatus ) {
+      //Print Message in Console:
       console.log( "Request failed: " + textStatus );
     });
     return false;

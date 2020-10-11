@@ -5,6 +5,7 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
         //Lutter contre la faille XSS :
         $xssLog = htmlspecialchars($_POST['login_Log']);
         $xssPass = htmlspecialchars($_POST['password_Log']);
+        //Lutter contre CRLF :
         $strReplaceLog = str_replace('\n',"",$xssLog);
         $strReplacePass = str_replace('\n',"",$xssPass);
         $daoAdherent = new AdherentDAO($bdd);
@@ -12,7 +13,6 @@ if(isset($_POST['login_Log']) AND isset($_POST['password_Log'])) {
             $thisAdherent = new Adherent($daoAdherent->findByLogin($strReplaceLog));
             $isPasswordCorrect = password_verify($strReplacePass, $thisAdherent->getPassword());
             if ($isPasswordCorrect) {
-                sleep(1); // Just For Wait
                 //***************************************************//
                 /* ------------------------------------------
                  * ------------------------------------------

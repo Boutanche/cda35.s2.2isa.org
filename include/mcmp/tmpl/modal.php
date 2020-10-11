@@ -6,6 +6,8 @@
             </div>
         </div>
         <dialog id="mydialog">
+            <!-- Je ne comprends pas ce que cette row change : "C'est Bootstrap" -->
+            <div class="row ">
             <div class="col-12">
                 <!--Section Tittle  -->
                 <div class="form-tittle">
@@ -62,6 +64,7 @@
                         </div>
                     </div>
                 </form>
+            </div>
             </div>
         </dialog>
     </div>

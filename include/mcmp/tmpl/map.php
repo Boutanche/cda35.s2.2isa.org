@@ -34,7 +34,10 @@
 <!-- BUG -->
 <!-- Fichiers Javascript -->
 <!-- Je l'intégre ici le code JS : choix volontaire fait en conscience -->
-<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin="">
+</script>
 <script>
     // On initialise la latitude et la longitude de Paris (centre de la carte)
     var lat = 44.103168;
@@ -44,7 +47,8 @@
     function initMap() {
         // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
         macarte = L.map('map').setView([lat, lon], 11);
-        // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+        // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut.
+        // Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
         L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
             // Il est toujours bien de laisser le lien vers la source des données
             attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',

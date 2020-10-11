@@ -9,7 +9,10 @@ class AdherentDAO
     {
         $this->setBdd($bdd);
     }
-    //Ajouter un adhérent dans la bdd.
+    /**
+     * Ajouter un Adherent dans la BDD :
+     * @param Adherent $adherent
+     */
     public function add(Adherent $adherent){
         //Preparation de la requête d'insertion :
         $req_InsertAdh = $this->_bdd->prepare('
@@ -33,11 +36,43 @@ class AdherentDAO
         $req_InsertAdh->execute();
         //return $adherent;
     }
+    /**
+     * Supprimer un Adherent de la BDD :
+     * @param Adherent $adherent
+     */
     public function delete(Adherent $adherent){
         //Exécuter un delete sur un Adhérent :
         $req_DeleteAdh = $this->_bdd->prepare('DELETE FROM mcmp_adherent WHERE IdAdherent = '.$adherent->getIdAdherent());
         $req_DeleteAdh->execute();
     }
+    /**
+     * Trouver un Adherent par son Login :
+     * @param $login
+     * @return mixed
+     */
+    function findByLogin($login){
+        $ar_adherent = Array();
+        $req_FindByLog_adherent =$this->_bdd->prepare('SELECT * FROM mcmp_adherent WHERE Login = :log');
+        $req_FindByLog_adherent->execute([':log' => $login]);
+        $ar_adherent = $req_FindByLog_adherent->fetch(PDO::FETCH_ASSOC);
+        return $ar_adherent;
+    }
+    /**
+     * Return True/False IF Login exist
+     * @param $adherentLog
+     * @return bool
+     */
+    public function exists_Log($adherentLog){
+        if (is_string($adherentLog)){
+            $req = $this->_bdd->prepare('SELECT COUNT(*) FROM mcmp_adherent WHERE Login = :Log');
+            $req->execute([':Log' => $adherentLog]);
+            return (bool) $req->fetchColumn();
+        }
+    }
+
+    /**
+     * @param $id
+     */
     public function getByID($id){
         //Exécuter un select avec une clause WHERE et return l'adhérent SELECT :
     }
@@ -48,13 +83,6 @@ class AdherentDAO
             $adherents = new Adherent($data);
         }
         $req_allAdherents->execute();
-    }
-    function findByLogin($login){
-        $ar_adherent = Array();
-        $req_FindByLog_adherent =$this->_bdd->prepare('SELECT * FROM mcmp_adherent WHERE Login = :log');
-        $req_FindByLog_adherent->execute([':log' => $login]);
-        $ar_adherent = $req_FindByLog_adherent->fetch(PDO::FETCH_ASSOC);
-        return $ar_adherent;
     }
     function findById($id) {
         $adherent = null;
@@ -70,14 +98,6 @@ class AdherentDAO
         $adherent = null;
         //requete update
         return $adherent;
-    }
-    //Test si Adherent avec Login = $adherentLog existe :
-    public function exists_Log($adherentLog){
-        if (is_string($adherentLog)){
-            $req = $this->_bdd->prepare('SELECT COUNT(*) FROM mcmp_adherent WHERE Login = :Log');
-            $req->execute([':Log' => $adherentLog]);
-            return (bool) $req->fetchColumn();
-        }
     }
     public function thisLog_And_thisPassword($adherentLog, $adherentPass){
         $req = $this->_bdd->prepare('SELECT COUNT(*) FROM mcmp_adherent WHERE Login = :Log AND Password = :Pass');

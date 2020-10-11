@@ -39,10 +39,20 @@ class Adherent
         }
     }
     //Une List de Getters
+
+    /**
+     * Trouver ID de cet Adherent
+     * @return mixed
+     */
     public function getIdAdherent()
     {
         return $this->_idAdherent;
     }
+
+    /**
+     * Trouver Nom de cet Adherent
+     * @return mixed
+     */
     public function getNom()
     {
         return $this->_nom;
@@ -96,10 +106,20 @@ class Adherent
         return $this->_idRole;
     }
     //Une List de Setters
+
+    /**
+     * Donner un ID à cet Adhérent
+     * @param $id
+     */
     public function setId($id): void
     {
         $this->_idAdherent= $id;
     }
+
+    /**
+     * Donner un Nom à cet Adhérent
+     * @param $nom
+     */
     public function setNom($nom): void
     {
         $this->_nom = $nom;
